@@ -1,0 +1,36 @@
+-  -----------  --------  ---------  --  -------------------------
+0  High_vs_Low  1         1          36  CorticalAtrophy
+0  High_vs_Low  1.54762   0.705428   31  HippocampalAtrophy
+0  High_vs_Low  1.86667   0.500603   39  LobarAtrophy
+0  High_vs_Low  0.5625    0.501223   46  BRAAK
+0  High_vs_Low  0.296296  0.266475   39  NIA_ADNC
+0  High_vs_Low  0.35503   0.204819   45  CERAD
+0  High_vs_Low  0.25      0.172283   31  TDP_Amygdala
+0  High_vs_Low  0.15      0.0598813  32  TDP_Hippocampus
+0  High_vs_Low  0.210526  0.143236   30  TDP_EntorhinalInfTemporal
+0  High_vs_Low  0         0.285714   28  TDP_Neocortex
+-  -----------  --------  ---------  --  -------------------------
+
+
+
+
+
+
+
+
+
+Differences in Survival:
+-------------------------  --------  --------  -  --
+CorticalAtrophy            0.432692  0.510671  1  36
+HippocampalAtrophy         0.252902  0.615039  1  31
+LobarAtrophy               1.21875   0.269606  1  39
+BRAAK                      1.2726    0.25928   1  46
+NIA_ADNC                   1.70935   0.19107   1  39
+CERAD_SemiQuant            1.48604   0.222832  1  45
+CERAD                      1.48604   0.222832  1  45
+HippocampalSclerosis       1.5123    0.218789  1  40
+TDP_Amygdala               0.708739  0.399863  1  31
+TDP_Hippocampus            0.969697  0.324756  1  32
+TDP_EntorhinalInfTemporal  0.437457  0.508352  1  30
+TDP_Neocortex              1.40389   0.236074  1  28
+-------------------------  --------  --------  -  --

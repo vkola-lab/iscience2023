@@ -1,0 +1,51 @@
+{
+  "ADNI": {
+    "BASEDIR": "./metadata/data_raw",
+    "MPRAGEFILE": "ADNI/MPRAGE_all.csv",
+    "SPGRFILE": "ADNI/SPGR_all.csv",
+    "MRI_DIR": "/data2/MRI_PET_DATA/raw_data/ADNI_MPRAGESPGR",
+    "AMYLOID_DIR": "/data2/MRI_PET_DATA/raw_data/ADNI_AMYLOID",
+    "FDG_DIR": "/data2/MRI_PET_DATA/raw_data/ADNI_FDG",
+    "rois_to_drop": ["4274"],
+    "csv_original": "./metadata/data_processed/merged_dataframe_cox_noqc.csv",
+    "csv_original_all": "./metadata/data_processed/merged_dataframe_all_cox.csv",
+    "raw_mri_dataframe_adni": "./metadata/data_processed/raw_mri_dataframe_adni.csv",
+    "foldersuffix": "cox_noqc",
+    "logs": "./logs/consolidate_nifti.log",
+    "FINAL_COLUMNS": [
+      "RID",
+      "PROGRESSION_CATEGORY",
+      "PROGRESSION_CATEGORY_2YR",
+      "PROGRESSES",
+      "APOE",
+      "TIME_TO_PROGRESSION",
+      "TIME_TO_FINAL_DX",
+      "TIMES",
+      "TIMES_ROUNDED",
+      "VISCODE2",
+      "AGE",
+      "MHNUM_medhx",
+      "MMSCORE_mmse",
+      "MedhxCurrent_medhx",
+      "MedhxDescription_medhx",
+      "PTEDUCAT_demo",
+      "PTGENDER_demo",
+      "PTHAND_demo",
+      "abeta",
+      "ptau",
+      "tau",
+      "DX_VALUES",
+      "DX_DATES",
+      "DX_STEPS",
+      "STEPS_UNDER_1_YR"
+    ]
+  },
+  "NACC": {
+    "MRI_DIR": "/data2/MRI_PET_DATA/raw_zips/NACC15RAW",
+    "TARGET_PATH": "/data2/MRI_PET_DATA/raw_data/MRI_nii_nacc",
+    "TMP_PATH": "/data2/MRI_PET_DATA/raw_data/NACC_tmp",
+    "MRI_DIR2": "/data2/MRI_PET_DATA/raw_zips/NACCRAW",
+    "unzipped_df": "./metadata/data_processed/unzipped_file_df.csv",
+    "csv_original": "./metadata/data_processed/merged_dataframe_cox_test.csv"
+  }
+}

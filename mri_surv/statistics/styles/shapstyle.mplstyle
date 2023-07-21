@@ -1,0 +1,11 @@
+axes.titlesize : 14
+axes.labelsize : 14
+lines.linewidth : 3
+lines.markersize : 1
+xtick.labelsize : 14
+ytick.labelsize : 14
+svg.fonttype : none
+savefig.dpi : 300
+figure.autolayout : True
+legend.fontsize : 14
+figure.frameon : False

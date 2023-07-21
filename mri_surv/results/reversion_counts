@@ -1,0 +1,26 @@
+
+====================
+ADNI
+
+AD_reverted:
+	0.05844155844155844
+
+MCI_reverted:
+	0.11282051282051282
+
+OD diagnosis at least once::
+	0
+
+
+====================
+NACC
+
+AD_reverted:
+	0.015384615384615385
+
+MCI_reverted:
+	0.15608465608465608
+
+OD diagnosis at least once::
+	22
+

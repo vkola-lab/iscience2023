@@ -1,0 +1,66 @@
+Summary
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: Grade ~ 1 + region * Cluster + (1 | id:hemi) + (1 | rev_initials)
+data:    g
+
+ link  threshold nobs logLik   AIC     niter       max.grad cond.H 
+ logit flexible  3360 -2109.58 4283.17 4564(22826) 3.87e-04 7.1e+02
+
+Random effects:
+ Groups       Name        Variance Std.Dev.
+ id:hemi      (Intercept) 2.112    1.453   
+ rev_initials (Intercept) 1.920    1.386   
+Number of groups:  id:hemi 96,  rev_initials 5 
+
+Coefficients:
+                                   Estimate Std. Error z value Pr(>|z|)    
+regionfrontal                       1.33118    0.31662   4.204 2.62e-05 ***
+regioninsula                        0.18314    0.34193   0.536  0.59224    
+regionmesial_temp                   2.10830    0.31799   6.630 3.36e-11 ***
+regionoccipital                     0.18852    0.33573   0.562  0.57443    
+regionparietal                      3.50970    0.31605  11.105  < 2e-16 ***
+regiontemporal_lobe_other           1.56489    0.32112   4.873 1.10e-06 ***
+Cluster1                            0.48348    0.53294   0.907  0.36430    
+Cluster2                           -0.81160    0.55621  -1.459  0.14452    
+Cluster3                           -1.04666    0.56474  -1.853  0.06383 .  
+regionfrontal:Cluster1              0.18037    0.43149   0.418  0.67593    
+regioninsula:Cluster1              -0.14105    0.46855  -0.301  0.76339    
+regionmesial_temp:Cluster1         -0.40954    0.43256  -0.947  0.34375    
+regionoccipital:Cluster1           -0.04048    0.45477  -0.089  0.92907    
+regionparietal:Cluster1            -0.68681    0.42283  -1.624  0.10431    
+regiontemporal_lobe_other:Cluster1 -1.01068    0.43984  -2.298  0.02157 *  
+regionfrontal:Cluster2              0.05405    0.46573   0.116  0.90761    
+regioninsula:Cluster2              -0.45365    0.52622  -0.862  0.38864    
+regionmesial_temp:Cluster2         -0.60397    0.47119  -1.282  0.19991    
+regionoccipital:Cluster2           -0.12371    0.50494  -0.245  0.80645    
+regionparietal:Cluster2            -0.98780    0.45433  -2.174  0.02969 *  
+regiontemporal_lobe_other:Cluster2 -1.54455    0.49699  -3.108  0.00188 ** 
+regionfrontal:Cluster3             -0.10759    0.48188  -0.223  0.82332    
+regioninsula:Cluster3               0.02511    0.52162   0.048  0.96161    
+regionmesial_temp:Cluster3         -0.75468    0.48278  -1.563  0.11801    
+regionoccipital:Cluster3           -0.36424    0.53090  -0.686  0.49266    
+regionparietal:Cluster3            -0.67744    0.46356  -1.461  0.14391    
+regiontemporal_lobe_other:Cluster3 -1.66408    0.51899  -3.206  0.00134 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+0|1   1.4807     0.7290   2.031
+1|2   4.5605     0.7360   6.197
+2|3   7.5670     0.7617   9.935
+Likelihood ratio tests of cumulative link models:
+ 
+     formula:                                                          link:
+mdl2 Grade ~ 1 + region + Cluster + (1 | id:hemi) + (1 | rev_initials) logit
+mdl  Grade ~ 1 + region * Cluster + (1 | id:hemi) + (1 | rev_initials) logit
+     threshold:
+mdl2 flexible  
+mdl  flexible  
+
+     no.par    AIC  logLik LR.stat df Pr(>Chisq)  
+mdl2     14 4276.6 -2124.3                        
+mdl      32 4283.2 -2109.6  29.465 18    0.04299 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

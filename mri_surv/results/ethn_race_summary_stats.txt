@@ -1,0 +1,20 @@
+Nonwhite proportion between cohorts: 
+
+Chi2=37.852203453408954,p=7.631214259594218e-10,dof=1,n=[532 507]
+--------------------
+HispanicOrLatino proportion between cohorts: 
+
+Chi2=1.468961403719256,p=0.2255096323022754,dof=1,n=[541 506]
+--------------------
+Nonwhite proportion between cohorts: 
+
+Chi2=30.24121405828641,p=3.8151556781563e-08,dof=1,n=[532 491]
+--------------------
+Nonwhite proportion between cohorts: 
+
+Chi2=30.24121405828641,p=3.8151556781563e-08,dof=1,n=[532 491]
+--------------------
+HispanicOrLatino proportion between cohorts: 
+
+Chi2=1.468961403719256,p=0.2255096323022754,dof=1,n=[541 506]
+--------------------

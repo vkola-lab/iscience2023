@@ -1,0 +1,55 @@
+{
+    "cnn_surv": {
+        "fil_num":              10,
+        "drop_rate":            0.3,
+        "batch_size":           10,
+        "balanced":             0,
+        "metric2":               "surv",
+        "metric":               "concord",
+        "Data_dir":             "/data2/MRI_PET_DATA/processed_images_final_cox_noqc/brain_stripped_cox_noqc/",
+        "learning_rate":        0.01,
+        "train_epochs":         2000
+    },
+    "cnn_surv_res": {
+        "fil_num":              10,
+        "drop_rate":            0.3,
+        "batch_size":           10,
+        "balanced":             0,
+        "metric2":               "surv",
+        "metric":               "concord",
+        "Data_dir":             "/data2/MRI_PET_DATA/processed_images_final_cox_noqc/brain_stripped_cox_noqc/",
+        "learning_rate":        0.01,
+        "train_epochs":         2000
+    },
+    "cnn_pre": {
+        "fil_num":              10,
+        "drop_rate":            0.01,
+        "batch_size":           10,
+        "balanced":             0,
+        "metric":               "CrossEntropy",
+        "Data_dir":             "/data2/MRI_PET_DATA/processed_images_final_unused_cox/brain_stripped_unused_cox/",
+        "learning_rate":        0.001,
+        "train_epochs":         100
+    },
+    "cnn": {
+        "fil_num":              10,
+        "drop_rate":            0.01,
+        "batch_size":           10,
+        "balanced":             0,
+        "metric":               "CrossEntropy",
+        "Data_dir":             "/data2/MRI_PET_DATA/processed_images_final_cox_noqc/brain_stripped_cox_noqc/",
+        "learning_rate":        0.001,
+        "train_epochs":         500
+    },
+    "mlp_parcellation": {
+        "fil_num": 25,
+        "drop_rate": 0.5,
+        "learning_rate": 0.001,
+        "weight_decay": 0.1,
+        "train_epochs": 2000,
+        "criterion": "cox_loss_orig",
+        "dataset": "ParcellationData",
+        "dataset_external": "ParcellationDataNacc",
+        "model": "_MLP"
+    }
+}

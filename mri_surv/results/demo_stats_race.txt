@@ -1,0 +1,7 @@
+PROGRESSION_CATEGORY,AmericanIndianOrAlaskanNative,Asian,BlackOrAfricanAmerican,NativeHawaiianOrPacificIslander,Unknown,White,All
+<2 years,0,2,1,0,0,60,63
+<4 years,0,0,5,0,0,41,46
+≥4 years,1,0,1,0,0,19,21
+Censored,5,11,54,1,1,306,378
+All,6,13,61,1,1,426,508
+

@@ -1,0 +1,13 @@
+
+	Kruskal-Wallis rank sum test
+
+data:  GMV by Subtype
+Kruskal-Wallis chi-squared = 174.08, df = 3, p-value < 2.2e-16
+
+  Comparison          Z      P.unadj        P.adj
+1     H - IH  -0.730069 4.653480e-01 1.000000e+00
+2     H - IL  -7.463679 8.413930e-14 5.048358e-13
+3    IH - IL  -6.372626 1.858182e-10 1.114909e-09
+4      H - L -11.282468 1.601872e-29 9.611233e-29
+5     IH - L  -9.540871 1.416374e-21 8.498245e-21
+6     IL - L  -1.809336 7.039885e-02 4.223931e-01

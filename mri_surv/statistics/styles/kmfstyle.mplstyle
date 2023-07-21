@@ -1,0 +1,13 @@
+axes.titlesize : 32
+axes.labelsize : 32
+lines.linewidth : 3
+lines.markersize : 10
+xtick.labelsize : 32
+ytick.labelsize : 32
+svg.fonttype : none
+savefig.dpi : 300
+figure.autolayout : True
+figure.figsize : 8.0, 6.4
+axes.prop_cycle : cycler('color', ['ff7f0e', '2ca02c', 'd62728', '9467bd','8c564b', 'e377c2', '7f7f7f', 'bcbd22', '17becf', '1f77b4'])
+legend.fontsize : 24
+figure.frameon : False

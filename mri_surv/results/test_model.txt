@@ -1,0 +1,73 @@
+mlp_parcellation_ventricles_sur_loss, censoring using all data: False
+Dataset	Statistic   	Mean               	Std
+ADNI   	C-index:    	0.7428332062354553 	0.01938745609488526
+ADNI   	Brier Score:	0.18978993248978948	0.059717105414053624
+NACC   	C-index:    	0.7076709062003179 	0.017124490414428893
+NACC   	Brier Score:	0.10851164128381759	0.010864474841632365
+
+mlp_parcellation_ventricles_sur_loss Fixed Brier Scores, censoring using all data: False
+Dataset  	Statistic         	    Mean	       Std
+ADNI     	Brier score 0 mos 	0       	0
+ADNI     	Brier score 24 mos	0.172011	0.0252375
+ADNI     	Brier score 48 mos	0.200862	0.0408055
+ADNI     	Brier score 84 mos	0.220039	0.071645
+NACC     	Brier score 0 mos 	0       	0
+NACC     	Brier score 24 mos	0.113296	0.00617601
+NACC     	Brier score 48 mos	0.131623	0.0167592
+NACC     	Brier score 84 mos	0.141161	0.0180802
+mlp_parcellation_gmv_csf_sur_loss, censoring using all data: False
+Dataset	Statistic   	Mean               	Std
+ADNI   	C-index:    	0.7266436962938816 	0.02907143626208708
+ADNI   	Brier Score:	0.18131175998619806	0.04448186869237357
+NACC   	C-index:    	0.7024721780604134 	0.006468332008993433
+NACC   	Brier Score:	0.11437565883787153	0.00823057969624793
+mlp_parcellation_gmv_csf_sur_loss Fixed Brier Scores, censoring using all data: False
+Dataset  	Statistic         	    Mean	       Std
+ADNI     	Brier score 0 mos 	0       	0
+ADNI     	Brier score 24 mos	0.171282	0.0247423
+ADNI     	Brier score 48 mos	0.200377	0.0417105
+ADNI     	Brier score 84 mos	0.226403	0.0660664
+NACC     	Brier score 0 mos 	0       	0
+NACC     	Brier score 24 mos	0.11364 	0.00500833
+NACC     	Brier score 48 mos	0.134426	0.0118833
+NACC     	Brier score 84 mos	0.144148	0.0172337
+mlp_csf_sur_loss, censoring using all data: False
+Dataset	Statistic   	Mean             	Std
+ADNI   	C-index:    	0.757728219013365	0.06284286570443537
+ADNI   	Brier Score:	0.1725710406294  	0.04835763005970974
+mlp_csf_sur_loss Fixed Brier Scores, censoring using all data: False
+Dataset  	Statistic         	    Mean	      Std
+ADNI     	Brier score 0 mos 	0       	0
+ADNI     	Brier score 24 mos	0.165437	0.0121253
+ADNI     	Brier score 48 mos	0.188886	0.0502237
+ADNI     	Brier score 84 mos	0.188152	0.0791326
+mlp_parcellation_ventricles_sur_loss_age, censoring using all data: False
+Dataset	Statistic   	Mean               	Std
+ADNI   	C-index:    	0.7298151237668722 	0.032661901052212984
+ADNI   	Brier Score:	0.19183857793879366	0.044781088438751754
+mlp_parcellation_ventricles_sur_loss_age Fixed Brier Scores, censoring using all data: False
+Dataset  	Statistic         	    Mean	      Std
+ADNI     	Brier score 0 mos 	0       	0
+ADNI     	Brier score 24 mos	0.175642	0.0214158
+ADNI     	Brier score 48 mos	0.207883	0.0336504
+ADNI     	Brier score 84 mos	0.226322	0.0614323
+mlp_parcellation_ventricles_sur_loss_mmse, censoring using all data: False
+Dataset	Statistic   	Mean              	Std
+ADNI   	C-index:    	0.7538686419608764	0.0395420128527151
+ADNI   	Brier Score:	0.1811663362402396	0.05531997824378136
+mlp_parcellation_ventricles_sur_loss_mmse Fixed Brier Scores, censoring using all data: False
+Dataset  	Statistic         	    Mean	      Std
+ADNI     	Brier score 0 mos 	0       	0
+ADNI     	Brier score 24 mos	0.167098	0.0226745
+ADNI     	Brier score 48 mos	0.193928	0.0416217
+ADNI     	Brier score 84 mos	0.205235	0.0555334
+mlp_parcellation_ventricles_sur_loss_age_mmse, censoring using all data: False
+Dataset	Statistic   	Mean               	Std
+ADNI   	C-index:    	0.7377995956000156 	0.029599240014461493
+ADNI   	Brier Score:	0.17391583128344237	0.046866305988959855
+mlp_parcellation_ventricles_sur_loss_age_mmse Fixed Brier Scores, censoring using all data: False
+Dataset  	Statistic         	    Mean	      Std
+ADNI     	Brier score 0 mos 	0       	0
+ADNI     	Brier score 24 mos	0.165621	0.0164068
+ADNI     	Brier score 48 mos	0.18913 	0.035781
+ADNI     	Brier score 84 mos	0.199621	0.0582213

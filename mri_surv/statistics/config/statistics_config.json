@@ -1,0 +1,455 @@
+{
+	"image_directories": {
+		"NACC": {
+			"wmgmcsf_basedir": "/data2/MRI_PET_DATA/processed_images_final_cox_test/mri_processed_cox_test/",
+			"basedir": "/data2/MRI_PET_DATA/processed_images_final_cox_test/brain_stripped_cox_test/",
+			"atlas": "/data2/MRI_PET_DATA/processed_images_final_cox_test/ADNI_MRI_nii_recentered_cat12_cox_test/mri_atlas/"
+		},
+		"ADNI": {
+			"basedir": "/data2/MRI_PET_DATA/processed_images_final_cox_noqc/brain_stripped_cox_noqc/",
+			"wmgmcsf_basedir": "/data2/MRI_PET_DATA/processed_images_final_cox_noqc/mri_processed_cox_noqc/",
+			"atlas": "/data2/MRI_PET_DATA/processed_images_final_cox_noqc/ADNI_MRI_nii_recentered_cat12_cox_noqc/mri_atlas/"
+		},
+		"ADNI_AD": {
+			"basedir": "/data2/MRI_PET_DATA/processed_images_final_cox_noqc_AD/brain_stripped_cox_noqc_AD/",
+			"wmgmcsf_basedir": "/data2/MRI_PET_DATA/processed_images_final_cox_noqc_AD/mri_processed_cox_noqc_AD/",
+			"atlas": "/data2/MRI_PET_DATA/processed_images_final_cox_noqc_AD/ADNI_MRI_nii_recentered_cat12_cox_noqc_AD/mri_atlas/"
+		}
+	},
+	"survival_plots": {
+		"ADNI": "figures/figure_2/kmf_plot_ADNI.svg",
+		"NACC": "figures/figure_2/kmf_plot_NACC.svg"
+	},
+	"survival_plots_overlay": {
+		"ADNI": "figures/supplement_survival/survival_plot_adni_cluster_",
+		"NACC": "figures/supplement_survival/survival_plot_nacc_cluster_"
+	},
+	"bins": ["0", "24","48","108"],
+	"new_bins": "np.arange(0,109,1)",
+	"basedir": "./metadata/data_processed/",
+	"pathology_csv_long": "./metadata/data_processed/pathology/pathology_table_",
+	"parcellation_csv": "./metadata/data_processed/mri3_cat12_vol_avg_combined_cox.csv",
+	"parcellation_csv_ad": "./metadata/data_processed/mri3_cat12_vol_avg_adni_ad.csv",
+	"shuffled_mris": "./metadata/data_processed/shuffled_mri_names.csv",
+	"shuffled_mri_dir": "/data2/MRI_PET_DATA/shuffled_mris/",
+	"parcellation_csv_clustered": "./metadata/data_processed/mri3_cat12_vol_avg_combined_cox_clustered.csv",
+  	"parcellation_csv_ad_clustered": "./metadata/data_processed/mri3_cat12_vol_avg_adni_ad_clustered.csv",
+  	"parcellation_csv_zscored": "./metadata/data_processed/mri3_cat12_vol_avg_combined_cox_zscored.csv",
+  	"parcellation_csv_centroids": "./metadata/data_processed/mri3_cat12_vol_avg_combined_cox_centroids.csv",
+  	"parcellation_csv_centroids_zs": "./metadata/data_processed/mri3_cat12_vol_avg_combined_cox_centroids_zs.csv",
+
+	"parcellation_tau_csv_clustered": "./metadata/data_processed/mri3_cat12_vol_avg_combined_cox_clustered_tau.csv",
+  	"parcellation_tau_csv_ad_clustered": "./metadata/data_processed/mri3_cat12_vol_avg_adni_ad_clustered_tau.csv",
+  	"parcellation_tau_csv_zscored": "./metadata/data_processed/mri3_cat12_vol_avg_combined_cox_zscored_tau.csv",
+  	"parcellation_tau_csv_centroids": "./metadata/data_processed/mri3_cat12_vol_avg_combined_cox_centroids_tau.csv",
+  	"parcellation_tau_csv_centroids_zs": "./metadata/data_processed/mri3_cat12_vol_avg_combined_cox_centroids_zs_tau.csv",
+
+	"parcellation_ptau_csv_clustered": "./metadata/data_processed/mri3_cat12_vol_avg_combined_cox_clustered_ptau.csv",
+  	"parcellation_ptau_csv_ad_clustered": "./metadata/data_processed/mri3_cat12_vol_avg_adni_ad_clustered_ptau.csv",
+  	"parcellation_ptau_csv_zscored": "./metadata/data_processed/mri3_cat12_vol_avg_combined_cox_zscored_ptau.csv",
+  	"parcellation_ptau_csv_centroids": "./metadata/data_processed/mri3_cat12_vol_avg_combined_cox_centroids_ptau.csv",
+  	"parcellation_ptau_csv_centroids_zs": "./metadata/data_processed/mri3_cat12_vol_avg_combined_cox_centroids_zs_ptau.csv",
+
+
+  "gmv_random_permute_stats":"./metadata/data_processed/gmv_stats_random_permute.csv",
+  "shap_random_permute_stats":"./metadata/data_processed/shap_stats_random_permute.csv",
+  "correlate_cluster_averages": "./results/cluster_average_correlation",
+	"transition_state_model": "./results/transition_state_model.txt",
+  "salient_centroids": "./results/salient_centroids_for_clusters.txt",
+  "survival_statistics": "./results/survival_statistics.txt",
+  "chi2_stats_fi": "./results/chi2stats.txt",
+  "salient_cortical_centroids": "./results/salient_cortical_centroids_for_clusters.txt",
+  "mlp_csv_with_death_prob": "./metadata/data_processed/mlp_csf_sur_loss_prob_at_death.csv",
+  "sankey_diagram": "./figures/figure_3/sankey_diagram.svg",
+  "pathology_plot_prefix": "figures/pathology/pathology_statistics_sunburst_",
+  "path_dict": "./metadata/data_raw/neuromorphometrics/path_regions_unique.csv",
+	"path_fi": "./metadata/data_raw/neuromorphometrics/NEUROPATH_05_17_21.csv",
+	"demographics_output_file": "./results/demographic_statistics.txt",
+	"ADNI_config": {
+		"metadata_csv": "./metadata/data_processed/merged_dataframe_cox_noqc_pruned_final.csv",
+		"demographics_columns": {
+			"raw": [
+				"RID",
+				"PROGRESSION_CATEGORY",
+				"PROGRESSES",
+				"TIME_TO_FINAL_DX",
+				"TIME_TO_PROGRESSION",
+				"AGE",
+				"MMSCORE_mmse",
+				"APOE",
+				"PTEDUCAT_demo",
+				"PTGENDER_demo",
+				"abeta",
+				"tau",
+				"ptau",
+				"TIMES"
+			],
+			"categorical": [
+				"PTGENDER_demo",
+				"APOE"
+			],
+			"continuous": [
+				"AGE",
+				"PTEDUCAT_demo",
+				"MMSCORE_mmse",
+				"abeta",
+				"tau",
+				"ptau"
+			]
+		},
+		"column_maps": {
+			"AGE": "Age (yrs)",
+			"PTEDUCAT_demo": "Education (yrs)",
+			"MMSCORE_mmse": "MMSE",
+			"abeta": "A\u03B242 (pg/mL)",
+			"tau": "t-tau (pg/mL)",
+			"ptau": "p-tau (pg/mL)",
+			"PTGENDER_demo": "Sex",
+			"APOE": "#APOE \u03B54 Alleles",
+			"PROGRESSION_CATEGORY": "Time to progress to AD",
+			"Sex": "Sex"
+		},
+		"output_file": "./results/demographic_statistics_summary_adni.csv",
+		"output_violin_plots": "./figures/demographic_statistics_violin_plots_adni"
+	},
+	"ADNI_AD_config": {
+		"metadata_csv": "./metadata/data_processed/merged_dataframe_cox_noqc_AD_pruned_final.csv"
+	},
+	"NACC_config": {
+		"metadata_csv": "./metadata/data_processed/merged_dataframe_cox_test_pruned_final.csv",
+		"demographics_columns": {
+			"raw": [
+				"RID",
+				"PROGRESSION_CATEGORY",
+				"AGE",
+				"PROGRESSES",
+				"TIME_TO_FINAL_DX",
+				"TIME_TO_PROGRESSION",
+				"MMSE",
+				"APOE",
+				"EDUC",
+				"SEX",
+				"abeta",
+				"ttau",
+				"ptau",
+				"TIMES",
+				"CSFTTMD",
+				"CSFPTMD",
+				"CSFABMD"
+			],
+			"categorical": [
+				"SEX",
+				"APOE"
+			],
+			"continuous": [
+				"AGE",
+				"EDUC",
+				"MMSE",
+				"abeta",
+				"ttau",
+				"ptau"
+			]
+		},
+		"column_maps": {
+			"AGE": "Age (yrs)",
+			"EDUC": "Education (yrs)",
+			"MMSE": "MMSE",
+			"SEX": "Sex",
+			"abeta": "A\u03B242 (pg/mL)",
+			"ttau": "t-tau (pg/mL)",
+			"ptau": "p-tau (pg/mL)",
+			"APOE": "#APOE \u03B54 Alleles",
+			"PROGRESSION_CATEGORY": "Time to progress to AD"
+		},
+		"csf_assay_md": {
+			"1": "ELISA",
+			"2": "LUMINEX",
+			"8": "Other"
+		},
+		"csf_cols": [
+			"CSFTTMD",
+			"CSFPTMD",
+			"CSFABMD"
+		],
+		"output_file": "./results/demographic_statistics_summary_nacc.csv",
+		"output_violin_plots": "./figures/demographic_statistics_violin_plots_nacc"
+	},
+	"csf_columns": [
+		"A\u03B242 (pg/mL)",
+		"t-tau (pg/mL)",
+		"p-tau (pg/mL)"
+	],
+	"crosstab_columns": [
+		"Sex",
+		"#APOE \u03B54 Alleles",
+		"Time to progress to AD"
+	],
+	"shared_columns": [
+		"Age (yrs)",
+		"MMSE",
+		"A\u03B242 (pg/mL)",
+		"t-tau (pg/mL)",
+		"p-tau (pg/mL)"
+	],
+	"ventricles": [
+		"CSF",
+		"3thVen",
+		"4thVen",
+		"InfLatVen",
+		"LatVen"
+	],
+	"path_config": {
+		"results": {
+			"cph": "./metadata/data_processed/mlp_parcellation.csv",
+			"sur": "./metadata/data_processed/mlp_parcellation_sur_loss.csv",
+			"sur_ventricle": "./metadata/data_processed/mlp_parcellation_ventricles_sur_loss.csv"
+		},
+		"shap_results": {
+			"sur_ventricle": "./metadata/data_processed/mlp_parcellation_ventricles_sur_loss_shap_values.csv"
+		},
+		"neuromorphometrics_mask": "./metadata/data_raw/neuromorphometrics/neuromorphometrics.nii",
+		"metadata_columns": [
+			"RID",
+			"AGE",
+			"CorticalAtrophy",
+			"LobarAtrophy",
+			"HippocampalAtrophy",
+			"BRAAK",
+			"CERAD",
+			"NIA_ADNC",
+			"CERAD_SemiQuant",
+			"HippocampalSclerosis",
+			"MTLSclerosisWithHippocampus",
+			"TDP_Amygdala",
+			"TDP_Hippocampus",
+			"TDP_EntorhinalInfTemporal",
+			"TDP_Neocortex",
+			"DATE_OF_DEATH",
+			"AgeAtDeath",
+			"EXAMDATE",
+			"PROGRESSES",
+			"TIME_TO_PROGRESSION",
+			"TIMES",
+			"FINAL_OBS_DATE",
+			"TIME_TO_FINAL_DX",
+			"AGE_AT_FINAL_DX"
+		],
+		"category_orders": {
+			"BRAAK": [
+				"Stage 0",
+				"Stage 1",
+				"Stage 2",
+				"Stage 3",
+				"Stage 4",
+				"Stage 5",
+				"Stage 6"
+			],
+			"CERAD": [
+				"C0",
+				"C1",
+				"C2",
+				"C3"
+			],
+			"CERAD_SemiQuant": [
+				"None",
+				"Sparse",
+				"Moderate",
+				"Frequent"
+			],
+			"NIA_ADNC": [
+				"Not AD",
+				"Low",
+				"Intermediate",
+				"High"
+			],
+			"CorticalAtrophy": [
+				"None",
+				"Mild",
+				"Moderate",
+				"Severe"
+			],
+			"HippocampalAtrophy": [
+				"None",
+				"Mild",
+				"Moderate",
+				"Severe"
+			],
+			"LobarAtrophy": [
+				"None",
+				"Yes"
+			],
+			"HippocampalSclerosis": [
+				"None",
+				"Bilateral",
+				"Present"
+			],
+			"TDP_Amygdala": [
+				"No",
+				"Yes"
+			],
+			"TDP_Hippocampus": [
+				"No",
+				"Yes"
+			],
+			"TDP_EntorhinalInfTemporal": [
+				"No",
+				"Yes"
+			],
+			"TDP_Neocortex": [
+				"No",
+				"Yes"
+			]
+		},
+		"column_maps": {
+			"CorticalAtrophy": "Cortical Atrophy",
+			"HippocampalAtrophy": "Hippocampal Atrophy",
+			"LobarAtrophy": "Lobar Atrophy",
+			"BRAAK": "BRAAK Stage",
+			"NIA_ADNC": "ADNC",
+			"CERAD_SemiQuant": "Semi-quantitative CERAD Score",
+			"CERAD": "CERAD Score",
+			"HippocampalSclerosis": "Hippocampal Sclerosis",
+			"TDP_Amygdala": "TDP-43 Pathology: Amygdala",
+			"TDP_Hippocampus": "TDP-43 Pathology: Hippocampus",
+			"TDP_EntorhinalInfTemporal": "TDP-43 Pathology: Entorhinal cortex",
+			"TDP_Neocortex": "TDP-43 Pathology: Neocortex",
+			"PROGRESSES": "Progresses"
+		},
+		"column_maps_regions": {
+			"Hip": "Hippocampus",
+			"Ent": "Entorhinal Area",
+			"ParHipGy": "Parahippocampus Gyrus",
+			"TemPo": "Temporal Pole",
+			"InfTemGy": "Inferior Temporal Gyrus",
+			"Amy": "Amygdala"
+		},
+		"group_changes": {
+			"CorticalAtrophy": {
+				"Mild": "L",
+				"Moderate": "H",
+				"Severe": "H"
+			},
+			"HippocampalAtrophy": {
+				"Mild": "L",
+				"Moderate": "H",
+				"Severe": "H"
+			},
+			"LobarAtrophy": {},
+			"BRAAK": {
+				"Stage 0": "L",
+				"Stage 1": "L",
+				"Stage 2": "L",
+				"Stage 3": "H",
+				"Stage 4": "H",
+				"Stage 5": "H",
+				"Stage 6": "H"
+			},
+			"NIA_ADNC": {
+				"Not AD": "L",
+				"Low": "L",
+				"Intermediate": "H",
+				"High": "H"
+			},
+			"CERAD_SemiQuant": {},
+			"CERAD": {
+				"C0": "L",
+				"C1": "L",
+				"C2": "H",
+				"C3": "H"
+			},
+			"HippocampalSclerosis": {},
+			"TDP_Amygdala": {},
+			"TDP_Hippocampus": {},
+			"TDP_EntorhinalInfTemporal": {},
+			"TDP_Neocortex": {},
+			"PROGRESSES": {"0": "No AD", "1": "AD"},
+			"Cluster Idx": {
+				"0": "High",
+				"1": "IH",
+				"2": "IL",
+				"3": "Low"
+			}
+		},
+		"category_orders_new": {
+			"BRAAK": [
+				"L",
+				"H"
+			],
+			"CERAD": [
+				"L",
+				"H"
+			],
+			"CERAD_SemiQuant": [
+				"None",
+				"Sparse",
+				"Moderate",
+				"Frequent"
+			],
+			"NIA_ADNC": [
+				"L",
+				"H"
+			],
+			"CorticalAtrophy": [
+				"L",
+				"H"
+			],
+			"HippocampalAtrophy": [
+				"L",
+				"H"
+			],
+			"LobarAtrophy": [
+				"None",
+				"Yes"
+			],
+			"HippocampalSclerosis": [
+				"None",
+				"Bilateral",
+				"Present"
+			],
+			"TDP_Amygdala": [
+				"No",
+				"Yes"
+			],
+			"TDP_Hippocampus": [
+				"No",
+				"Yes"
+			],
+			"TDP_EntorhinalInfTemporal": [
+				"No",
+				"Yes"
+			],
+			"TDP_Neocortex": [
+				"No",
+				"Yes"
+			],
+			"Cluster Idx": [
+				"High",
+				"IH",
+				"IL",
+				"Low"
+			],
+			"PROGRESSES": [
+				"No AD",
+				"AD"
+			]
+		}
+	},
+	"neuropath_config": {
+		"pathologies": {
+			"AB_CAA": {},
+			"AB_CP": {},
+			"NEURON_LOSS": {},
+			"SILVER_NFT": {},
+			"SILVER_NP": {},
+			"TAU_GLIAL": {},
+			"TAU_NFT": {},
+			"TAU_NP": {},
+			"TDP_DGCI": {},
+			"TDP_DN": {},
+			"TDP_NCI": {},
+			"TDP_NII": {}
+		}
+	},
+  "neuromorphometrics": "./metadata/data_raw/neuromorphometrics/neuromorphometrics.csv",
+	"neuromorphometrics_roi": "./metadata/data_raw/neuromorphometrics/rois_manual.csv"
+}

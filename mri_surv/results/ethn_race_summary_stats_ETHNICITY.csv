@@ -1,0 +1,4 @@
+Dataset,HispanicOrLatino,MultipleValues,NotHispanicOrLatino,Unknown,All
+ADNI,15,2,526,1,544
+NACC,22,0,484,2,508
+All,37,2,1010,3,1052

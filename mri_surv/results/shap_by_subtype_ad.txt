@@ -1,0 +1,13 @@
+
+	Kruskal-Wallis rank sum test
+
+data:  Shap by Cluster
+Kruskal-Wallis chi-squared = 267.3, df = 3, p-value < 2.2e-16
+
+  Comparison          Z      P.unadj        P.adj
+1     H - IH  -4.747688 2.057552e-06 1.234531e-05
+2     H - IL -10.104565 5.272915e-24 3.163749e-23
+3    IH - IL  -5.626591 1.838063e-08 1.102838e-07
+4      H - L -15.343133 3.937277e-53 2.362366e-52
+5     IH - L -10.352331 4.084198e-25 2.450519e-24
+6     IL - L  -3.871824 1.080241e-04 6.481448e-04

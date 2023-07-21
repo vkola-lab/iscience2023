@@ -1,0 +1,13 @@
+{
+    "inception": {
+        "batch_size":           10,
+        "balanced":             0,
+        "name":                 "inception",
+        "metric2":               "surv",
+        "metric":               "concord",
+        "Data_dir":             "/data2/MRI_PET_DATA/processed_images_final_cox_noqc/brain_stripped_cox_noqc/",
+        "Data_dir_ext":         "/data2/MRI_PET_DATA/processed_images_final_cox_test/brain_stripped_cox_test/",
+        "lr":        0.005,
+        "train_epochs":         1000
+    }
+}

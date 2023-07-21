@@ -1,0 +1,194 @@
+Type III Analysis of Variance Table with Satterthwaite's method
+               Sum Sq Mean Sq NumDF DenDF F value    Pr(>F)    
+Region          2.248 0.03458    65 34840  1.5921  0.001718 ** 
+Subtype         4.815 1.60514     3   536 73.8945 < 2.2e-16 ***
+Region:Subtype 85.897 0.44050   195 34840 20.2787 < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: "logGMV ~ Region*Subtype + (1|RID)"
+   Data: tb2
+
+REML criterion at convergence: -31915.5
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-8.3181 -0.6032  0.0294  0.6412  6.3785 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ RID      (Intercept) 0.01065  0.1032  
+ Residual             0.02172  0.1474  
+Number of obs: 35640, groups:  RID, 540
+
+Fixed effects:
+                                                                Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)                                                    1.760e+00  1.254e-02  4.402e+03 140.429  < 2e-16 ***
+RegionAccumbens                                               -8.389e-02  1.452e-02  3.484e+04  -5.777 7.67e-09 ***
+RegionSupplementary Motor Cortex                              -1.151e-01  1.452e-02  3.484e+04  -7.928 2.30e-15 ***
+RegionCentral Operculum                                       -4.521e-02  1.452e-02  3.484e+04  -3.113 0.001853 ** 
+RegionTriangular Part of the Inferior Frontal Gyrus           -6.256e-02  1.452e-02  3.484e+04  -4.308 1.65e-05 ***
+RegionThalamus Proper                                         -8.165e-02  1.452e-02  3.484e+04  -5.622 1.90e-08 ***
+RegionPutamen                                                 -1.184e-01  1.452e-02  3.484e+04  -8.156 3.59e-16 ***
+RegionInferior Occipital Gyrus                                -1.437e-02  1.452e-02  3.484e+04  -0.990 0.322301    
+RegionCalcarine Cortex                                        -6.760e-02  1.452e-02  3.484e+04  -4.655 3.25e-06 ***
+RegionEntorhinal Area                                         -1.915e-03  1.452e-02  3.484e+04  -0.132 0.895079    
+RegionPostcentral Gyrus                                       -1.086e-01  1.452e-02  3.484e+04  -7.477 7.79e-14 ***
+RegionMiddle Cingulate Gyrus                                  -1.009e-01  1.452e-02  3.484e+04  -6.950 3.70e-12 ***
+RegionMedial Orbital Gyrus                                    -5.415e-02  1.452e-02  3.484e+04  -3.729 0.000193 ***
+RegionCerebellar Vermal Lobules VI-VII                        -1.342e-01  1.452e-02  3.484e+04  -9.241  < 2e-16 ***
+RegionCerebral White Matter                                   -1.691e-01  1.452e-02  3.484e+04 -11.647  < 2e-16 ***
+RegionMiddle Occipital Gyrus                                  -2.531e-02  1.452e-02  3.484e+04  -1.743 0.081380 .  
+RegionPlanum Polare                                           -2.010e-02  1.452e-02  3.484e+04  -1.384 0.166241    
+RegionCerebellar Vermal Lobules VIII-X                        -1.236e-01  1.452e-02  3.484e+04  -8.513  < 2e-16 ***
+RegionParahippocampus Gyrus                                   -1.017e-02  1.452e-02  3.484e+04  -0.700 0.483771    
+RegionSuperior Frontal Gyrus Medial Segment                   -5.782e-02  1.452e-02  3.484e+04  -3.982 6.85e-05 ***
+RegionMiddle Frontal Gyrus                                    -8.308e-02  1.452e-02  3.484e+04  -5.721 1.07e-08 ***
+RegionAnterior Cingulate Gyrus                                -7.773e-02  1.452e-02  3.484e+04  -5.352 8.74e-08 ***
+RegionPrecentral Gyrus                                        -1.007e-01  1.452e-02  3.484e+04  -6.933 4.18e-12 ***
+RegionOrbital Part of the Inferior Frontal Gyrus              -4.581e-02  1.452e-02  3.484e+04  -3.154 0.001611 ** 
+RegionTemporal Pole                                           -1.018e-02  1.452e-02  3.484e+04  -0.701 0.483427    
+RegionVentral DC                                              -4.217e-02  1.452e-02  3.484e+04  -2.904 0.003690 ** 
+RegionInferior Temporal Gyrus                                  4.113e-03  1.452e-02  3.484e+04   0.283 0.777030    
+RegionOpercular Part of the Inferior Frontal Gyrus            -7.727e-02  1.452e-02  3.484e+04  -5.321 1.04e-07 ***
+RegionTransverse Temporal Gyrus                               -4.442e-02  1.452e-02  3.484e+04  -3.059 0.002224 ** 
+RegionPlanum Temporale                                        -2.432e-02  1.452e-02  3.484e+04  -1.675 0.094041 .  
+RegionPrecuneus                                               -6.116e-02  1.452e-02  3.484e+04  -4.211 2.54e-05 ***
+RegionBrainstem                                               -1.273e-01  1.452e-02  3.484e+04  -8.768  < 2e-16 ***
+RegionSuperior Parietal Lobule                                -9.747e-02  1.452e-02  3.484e+04  -6.711 1.96e-11 ***
+RegionHippocampus                                             -1.667e-03  1.452e-02  3.484e+04  -0.115 0.908625    
+RegionOccipital Fusiform Gyrus                                -9.694e-04  1.452e-02  3.484e+04  -0.067 0.946778    
+RegionSupramarginal Gyrus                                     -6.377e-02  1.452e-02  3.484e+04  -4.391 1.13e-05 ***
+RegionGyrus Rectus                                            -5.116e-02  1.452e-02  3.484e+04  -3.523 0.000427 ***
+RegionMiddle Temporal Gyrus                                    1.071e-03  1.452e-02  3.484e+04   0.074 0.941225    
+RegionPosterior Orbital Gyrus                                 -3.135e-02  1.452e-02  3.484e+04  -2.159 0.030860 *  
+RegionAmygdala                                                -3.760e-03  1.452e-02  3.484e+04  -0.259 0.795714    
+RegionPostcentral Gyrus Medial Segment                        -1.374e-01  1.452e-02  3.484e+04  -9.459  < 2e-16 ***
+RegionAnterior Insula                                         -5.411e-02  1.452e-02  3.484e+04  -3.726 0.000195 ***
+RegionOptic Chiasm                                            -1.166e-01  1.452e-02  3.484e+04  -8.028 1.02e-15 ***
+RegionSuperior Frontal Gyrus                                  -9.470e-02  1.452e-02  3.484e+04  -6.521 7.08e-11 ***
+RegionCaudate                                                 -1.504e-01  1.452e-02  3.484e+04 -10.359  < 2e-16 ***
+RegionLingual Gyrus                                           -1.412e-02  1.452e-02  3.484e+04  -0.972 0.330933    
+RegionPrecentral Gyrus Medial Segment                         -1.269e-01  1.452e-02  3.484e+04  -8.738  < 2e-16 ***
+RegionLateral Orbital Gyrus                                   -6.331e-02  1.452e-02  3.484e+04  -4.359 1.31e-05 ***
+RegionBasal Forebrain                                         -4.175e-02  1.452e-02  3.484e+04  -2.875 0.004042 ** 
+RegionSubcallosal Area                                        -5.512e-02  1.452e-02  3.484e+04  -3.796 0.000148 ***
+RegionPosterior Cingulate Gyrus                               -5.116e-02  1.452e-02  3.484e+04  -3.523 0.000427 ***
+RegionAngular Gyrus                                           -4.297e-02  1.452e-02  3.484e+04  -2.959 0.003088 ** 
+RegionFrontal Pole                                            -9.633e-02  1.452e-02  3.484e+04  -6.633 3.34e-11 ***
+RegionFrontal Operculum                                       -4.852e-02  1.452e-02  3.484e+04  -3.341 0.000835 ***
+RegionParietal Operculum                                      -5.645e-02  1.452e-02  3.484e+04  -3.887 0.000102 ***
+RegionCuneus                                                  -4.817e-02  1.452e-02  3.484e+04  -3.317 0.000910 ***
+RegionAnterior Orbital Gyrus                                  -7.433e-02  1.452e-02  3.484e+04  -5.118 3.10e-07 ***
+RegionCerebellum White Matter                                 -9.477e-02  1.452e-02  3.484e+04  -6.526 6.84e-11 ***
+RegionSuperior Temporal Gyrus                                 -2.114e-02  1.452e-02  3.484e+04  -1.456 0.145420    
+RegionPallidum                                                -1.644e-01  1.452e-02  3.484e+04 -11.320  < 2e-16 ***
+RegionCerebellum Exterior                                     -9.525e-02  1.452e-02  3.484e+04  -6.559 5.51e-11 ***
+RegionSuperior Occipital Gyrus                                -7.375e-02  1.452e-02  3.484e+04  -5.079 3.82e-07 ***
+RegionMedial Frontal Cortex                                   -4.607e-02  1.452e-02  3.484e+04  -3.172 0.001515 ** 
+RegionOccipital Pole                                          -4.447e-02  1.452e-02  3.484e+04  -3.062 0.002198 ** 
+RegionPosterior Insula                                        -5.034e-02  1.452e-02  3.484e+04  -3.466 0.000528 ***
+RegionCerebellar Vermal Lobules I-V                           -1.477e-01  1.452e-02  3.484e+04 -10.173  < 2e-16 ***
+SubtypeIH                                                     -1.956e-01  2.157e-02  4.402e+03  -9.067  < 2e-16 ***
+SubtypeH                                                      -3.124e-01  1.975e-02  4.402e+03 -15.818  < 2e-16 ***
+SubtypeIL                                                     -1.029e-01  2.273e-02  4.402e+03  -4.524 6.21e-06 ***
+RegionAccumbens:SubtypeIH                                      8.743e-02  2.499e-02  3.484e+04   3.498 0.000469 ***
+RegionSupplementary Motor Cortex:SubtypeIH                     7.296e-02  2.499e-02  3.484e+04   2.919 0.003513 ** 
+RegionCentral Operculum:SubtypeIH                             -4.345e-03  2.499e-02  3.484e+04  -0.174 0.861972    
+RegionTriangular Part of the Inferior Frontal Gyrus:SubtypeIH -2.425e-02  2.499e-02  3.484e+04  -0.970 0.331987    
+RegionThalamus Proper:SubtypeIH                                6.745e-02  2.499e-02  3.484e+04   2.699 0.006967 ** 
+RegionPutamen:SubtypeIH                                        1.738e-01  2.499e-02  3.484e+04   6.954 3.62e-12 ***
+RegionInferior Occipital Gyrus:SubtypeIH                      -1.189e-02  2.499e-02  3.484e+04  -0.476 0.634169    
+RegionCalcarine Cortex:SubtypeIH                               6.954e-02  2.499e-02  3.484e+04   2.782 0.005399 ** 
+RegionEntorhinal Area:SubtypeIH                                4.210e-02  2.499e-02  3.484e+04   1.685 0.092076 .  
+RegionPostcentral Gyrus:SubtypeIH                              1.012e-01  2.499e-02  3.484e+04   4.048 5.17e-05 ***
+RegionMiddle Cingulate Gyrus:SubtypeIH                         6.046e-02  2.499e-02  3.484e+04   2.419 0.015572 *  
+RegionMedial Orbital Gyrus:SubtypeIH                          -1.464e-02  2.499e-02  3.484e+04  -0.586 0.558039    
+RegionCerebellar Vermal Lobules VI-VII:SubtypeIH               2.462e-01  2.499e-02  3.484e+04   9.849  < 2e-16 ***
+RegionCerebral White Matter:SubtypeIH                          2.365e-01  2.499e-02  3.484e+04   9.463  < 2e-16 ***
+RegionMiddle Occipital Gyrus:SubtypeIH                         2.277e-02  2.499e-02  3.484e+04   0.911 0.362284    
+RegionPlanum Polare:SubtypeIH                                 -2.291e-02  2.499e-02  3.484e+04  -0.917 0.359309    
+RegionCerebellar Vermal Lobules VIII-X:SubtypeIH               2.488e-01  2.499e-02  3.484e+04   9.954  < 2e-16 ***
+RegionParahippocampus Gyrus:SubtypeIH                          4.604e-02  2.499e-02  3.484e+04   1.842 0.065470 .  
+RegionSuperior Frontal Gyrus Medial Segment:SubtypeIH         -1.365e-03  2.499e-02  3.484e+04  -0.055 0.956444    
+RegionMiddle Frontal Gyrus:SubtypeIH                           9.240e-03  2.499e-02  3.484e+04   0.370 0.711601    
+RegionAnterior Cingulate Gyrus:SubtypeIH                       9.087e-03  2.499e-02  3.484e+04   0.364 0.716175    
+RegionPrecentral Gyrus:SubtypeIH                               7.542e-02  2.499e-02  3.484e+04   3.018 0.002548 ** 
+RegionOrbital Part of the Inferior Frontal Gyrus:SubtypeIH    -1.471e-02  2.499e-02  3.484e+04  -0.589 0.556154    
+RegionTemporal Pole:SubtypeIH                                  2.744e-02  2.499e-02  3.484e+04   1.098 0.272260    
+RegionVentral DC:SubtypeIH                                     7.788e-02  2.499e-02  3.484e+04   3.116 0.001835 ** 
+RegionInferior Temporal Gyrus:SubtypeIH                       -1.250e-02  2.499e-02  3.484e+04  -0.500 0.617000    
+RegionOpercular Part of the Inferior Frontal Gyrus:SubtypeIH   1.514e-02  2.499e-02  3.484e+04   0.606 0.544559    
+RegionTransverse Temporal Gyrus:SubtypeIH                     -2.052e-02  2.499e-02  3.484e+04  -0.821 0.411713    
+RegionPlanum Temporale:SubtypeIH                              -2.952e-02  2.499e-02  3.484e+04  -1.181 0.237489    
+RegionPrecuneus:SubtypeIH                                      1.664e-02  2.499e-02  3.484e+04   0.666 0.505597    
+RegionBrainstem:SubtypeIH                                      2.363e-01  2.499e-02  3.484e+04   9.453  < 2e-16 ***
+RegionSuperior Parietal Lobule:SubtypeIH                       1.032e-01  2.499e-02  3.484e+04   4.130 3.63e-05 ***
+RegionHippocampus:SubtypeIH                                   -4.441e-04  2.499e-02  3.484e+04  -0.018 0.985825    
+RegionOccipital Fusiform Gyrus:SubtypeIH                      -1.646e-02  2.499e-02  3.484e+04  -0.659 0.510188    
+RegionSupramarginal Gyrus:SubtypeIH                            5.162e-02  2.499e-02  3.484e+04   2.065 0.038890 *  
+RegionGyrus Rectus:SubtypeIH                                  -1.136e-02  2.499e-02  3.484e+04  -0.455 0.649453    
+RegionMiddle Temporal Gyrus:SubtypeIH                         -4.045e-02  2.499e-02  3.484e+04  -1.618 0.105596    
+RegionPosterior Orbital Gyrus:SubtypeIH                       -2.026e-02  2.499e-02  3.484e+04  -0.811 0.417526    
+RegionAmygdala:SubtypeIH                                       3.102e-02  2.499e-02  3.484e+04   1.241 0.214537    
+RegionPostcentral Gyrus Medial Segment:SubtypeIH               1.749e-01  2.499e-02  3.484e+04   6.998 2.65e-12 ***
+RegionAnterior Insula:SubtypeIH                                2.398e-02  2.499e-02  3.484e+04   0.960 0.337245    
+RegionOptic Chiasm:SubtypeIH                                   2.017e-01  2.499e-02  3.484e+04   8.072 7.15e-16 ***
+RegionSuperior Frontal Gyrus:SubtypeIH                         5.397e-02  2.499e-02  3.484e+04   2.159 0.030834 *  
+RegionCaudate:SubtypeIH                                        1.902e-01  2.499e-02  3.484e+04   7.610 2.81e-14 ***
+RegionLingual Gyrus:SubtypeIH                                 -9.433e-04  2.499e-02  3.484e+04  -0.038 0.969894    
+RegionPrecentral Gyrus Medial Segment:SubtypeIH                1.357e-01  2.499e-02  3.484e+04   5.428 5.73e-08 ***
+RegionLateral Orbital Gyrus:SubtypeIH                         -2.292e-03  2.499e-02  3.484e+04  -0.092 0.926941    
+RegionBasal Forebrain:SubtypeIH                                4.112e-02  2.499e-02  3.484e+04   1.645 0.099955 .  
+RegionSubcallosal Area:SubtypeIH                               1.754e-02  2.499e-02  3.484e+04   0.702 0.482832    
+RegionPosterior Cingulate Gyrus:SubtypeIH                      1.172e-02  2.499e-02  3.484e+04   0.469 0.639107    
+RegionAngular Gyrus:SubtypeIH                                  2.200e-02  2.499e-02  3.484e+04   0.880 0.378632    
+RegionFrontal Pole:SubtypeIH                                   1.196e-01  2.499e-02  3.484e+04   4.785 1.72e-06 ***
+RegionFrontal Operculum:SubtypeIH                             -3.510e-02  2.499e-02  3.484e+04  -1.404 0.160241    
+RegionParietal Operculum:SubtypeIH                             5.663e-03  2.499e-02  3.484e+04   0.227 0.820756    
+RegionCuneus:SubtypeIH                                         2.888e-02  2.499e-02  3.484e+04   1.156 0.247878    
+RegionAnterior Orbital Gyrus:SubtypeIH                         2.302e-02  2.499e-02  3.484e+04   0.921 0.357029    
+RegionCerebellum White Matter:SubtypeIH                        1.839e-01  2.499e-02  3.484e+04   7.358 1.90e-13 ***
+RegionSuperior Temporal Gyrus:SubtypeIH                       -5.833e-03  2.499e-02  3.484e+04  -0.233 0.815458    
+RegionPallidum:SubtypeIH                                       2.766e-01  2.499e-02  3.484e+04  11.068  < 2e-16 ***
+RegionCerebellum Exterior:SubtypeIH                            1.973e-01  2.499e-02  3.484e+04   7.893 3.04e-15 ***
+RegionSuperior Occipital Gyrus:SubtypeIH                       9.569e-02  2.499e-02  3.484e+04   3.828 0.000129 ***
+RegionMedial Frontal Cortex:SubtypeIH                         -2.112e-02  2.499e-02  3.484e+04  -0.845 0.398088    
+RegionOccipital Pole:SubtypeIH                                 2.811e-02  2.499e-02  3.484e+04   1.125 0.260713    
+RegionPosterior Insula:SubtypeIH                               4.331e-02  2.499e-02  3.484e+04   1.733 0.083138 .  
+RegionCerebellar Vermal Lobules I-V:SubtypeIH                  2.709e-01  2.499e-02  3.484e+04  10.839  < 2e-16 ***
+RegionAccumbens:SubtypeH                                       1.616e-01  2.288e-02  3.484e+04   7.065 1.64e-12 ***
+RegionSupplementary Motor Cortex:SubtypeH                      2.853e-01  2.288e-02  3.484e+04  12.470  < 2e-16 ***
+RegionCentral Operculum:SubtypeH                               1.219e-01  2.288e-02  3.484e+04   5.328 9.99e-08 ***
+RegionTriangular Part of the Inferior Frontal Gyrus:SubtypeH   2.080e-01  2.288e-02  3.484e+04   9.090  < 2e-16 ***
+RegionThalamus Proper:SubtypeH                                 2.327e-01  2.288e-02  3.484e+04  10.171  < 2e-16 ***
+RegionPutamen:SubtypeH                                         2.322e-01  2.288e-02  3.484e+04  10.150  < 2e-16 ***
+RegionInferior Occipital Gyrus:SubtypeH                        6.502e-02  2.288e-02  3.484e+04   2.842 0.004489 ** 
+RegionCalcarine Cortex:SubtypeH                                2.498e-01  2.288e-02  3.484e+04  10.916  < 2e-16 ***
+RegionEntorhinal Area:SubtypeH                                -5.904e-03  2.288e-02  3.484e+04  -0.258 0.796376    
+RegionPostcentral Gyrus:SubtypeH                               2.362e-01  2.288e-02  3.484e+04  10.324  < 2e-16 ***
+RegionMiddle Cingulate Gyrus:SubtypeH                          2.306e-01  2.288e-02  3.484e+04  10.079  < 2e-16 ***
+RegionMedial Orbital Gyrus:SubtypeH                            1.597e-01  2.288e-02  3.484e+04   6.979 3.02e-12 ***
+RegionCerebellar Vermal Lobules VI-VII:SubtypeH                2.897e-01  2.288e-02  3.484e+04  12.663  < 2e-16 ***
+RegionCerebral White Matter:SubtypeH                           3.791e-01  2.288e-02  3.484e+04  16.568  < 2e-16 ***
+RegionMiddle Occipital Gyrus:SubtypeH                          6.406e-02  2.288e-02  3.484e+04   2.800 0.005113 ** 
+RegionPlanum Polare:SubtypeH                                   6.921e-02  2.288e-02  3.484e+04   3.025 0.002489 ** 
+RegionCerebellar Vermal Lobules VIII-X:SubtypeH                2.662e-01  2.288e-02  3.484e+04  11.635  < 2e-16 ***
+RegionParahippocampus Gyrus:SubtypeH                           1.329e-02  2.288e-02  3.484e+04   0.581 0.561256    
+RegionSuperior Frontal Gyrus Medial Segment:SubtypeH           1.627e-01  2.288e-02  3.484e+04   7.111 1.17e-12 ***
+RegionMiddle Frontal Gyrus:SubtypeH                            2.154e-01  2.288e-02  3.484e+04   9.414  < 2e-16 ***
+RegionAnterior Cingulate Gyrus:SubtypeH                        1.981e-01  2.288e-02  3.484e+04   8.657  < 2e-16 ***
+RegionPrecentral Gyrus:SubtypeH                                2.548e-01  2.288e-02  3.484e+04  11.137  < 2e-16 ***
+RegionOrbital Part of the Inferior Frontal Gyrus:SubtypeH      1.701e-01  2.288e-02  3.484e+04   7.436 1.06e-13 ***
+RegionTemporal Pole:SubtypeH                                   2.094e-02  2.288e-02  3.484e+04   0.915 0.360169    
+RegionVentral DC:SubtypeH                                      1.093e-01  2.288e-02  3.484e+04   4.778 1.78e-06 ***
+RegionInferior Temporal Gyrus:SubtypeH                        -2.881e-03  2.288e-02  3.484e+04  -0.126 0.899781    
+RegionOpercular Part of the Inferior Frontal Gyrus:SubtypeH    2.214e-01  2.288e-02  3.484e+04   9.678  < 2e-16 ***
+RegionTransverse Temporal Gyrus:SubtypeH                       1.852e-01  2.288e-02  3.484e+04   8.094 5.97e-16 ***
+RegionPlanum Temporale:SubtypeH                                1.167e-01  2.288e-02  3.484e+04   5.100 3.41e-07 ***
+RegionPrecuneus:SubtypeH                                       1.590e-01  2.288e-02  3.484e+04   6.952 3.68e-12 ***
+RegionBrainstem:SubtypeH                                       2.876e-01  2.288e-02  3.484e+04  12.571  < 2e-16 ***
+RegionSuperior Parietal Lobule:SubtypeH                        1.982e-01  2.288e-02  3.484e+04   8.665  < 2e-16 ***
+ [ reached getOption("max.print") -- omitted 98 rows ]
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

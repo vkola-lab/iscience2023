@@ -1,0 +1,36 @@
+Type III Analysis of Variance Table with Satterthwaite's method
+           Sum Sq   Mean Sq NumDF  DenDF F value    Pr(>F)    
+Subtype 0.0095718 0.0031906     3 947.79  22.483 4.565e-14 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: "logShap ~ Subtype + (1|RID)+(1|Region)"
+   Data: tb
+
+REML criterion at convergence: -30342.8
+
+Scaled residuals: 
+     Min       1Q   Median       3Q      Max 
+-10.0120  -0.3959  -0.0241   0.4270   9.1718 
+
+Random effects:
+ Groups   Name        Variance  Std.Dev.
+ RID      (Intercept) 4.569e-06 0.002138
+ Region   (Intercept) 1.079e-05 0.003285
+ Residual             1.419e-04 0.011913
+Number of obs: 5080, groups:  RID, 508; Region, 22
+
+Fixed effects:
+             Estimate Std. Error        df t value Pr(>|t|)    
+(Intercept) 1.367e-01  8.281e-04 3.432e+01 165.017  < 2e-16 ***
+Subtype1    7.102e-04  6.312e-04 9.290e+02   1.125   0.2608    
+Subtype2    2.112e-03  6.909e-04 9.516e+02   3.056   0.0023 ** 
+Subtype3    4.788e-03  6.336e-04 1.010e+03   7.557 9.24e-14 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+         (Intr) Sbtyp1 Sbtyp2
+Subtype1 -0.380              
+Subtype2 -0.371  0.492       
+Subtype3 -0.386  0.500  0.424

@@ -1,0 +1,136 @@
+Summary
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: Grade ~ 1 + region * Cluster + (1 | id:hemi) + (1 | rev_initials)
+   Data: g
+
+REML criterion at convergence: 5249.4
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.8356 -0.6611 -0.0650  0.5848  4.6388 
+
+Random effects:
+ Groups       Name        Variance Std.Dev.
+ id:hemi      (Intercept) 0.10667  0.3266  
+ rev_initials (Intercept) 0.07103  0.2665  
+ Residual                 0.25023  0.5002  
+Number of obs: 3360, groups:  id:hemi, 96; rev_initials, 5
+
+Fixed effects:
+                                     Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)                           0.35833    0.14400    8.39358   2.488 0.036296 *  
+regionfrontal                         0.27500    0.06458 3236.00019   4.258 2.12e-05 ***
+regioninsula                          0.06667    0.06458 3236.00019   1.032 0.302000    
+regionmesial_temp                     0.45833    0.06458 3236.00019   7.097 1.56e-12 ***
+regionoccipital                       0.05000    0.06458 3236.00019   0.774 0.438846    
+regionparietal                        0.83333    0.06458 3236.00019  12.904  < 2e-16 ***
+regiontemporal_lobe_other             0.35000    0.06458 3236.00019   5.420 6.41e-08 ***
+Cluster1                              0.04167    0.11428  173.71209   0.365 0.715850    
+Cluster2                             -0.15833    0.11428  173.71209  -1.385 0.167676    
+Cluster3                             -0.18333    0.11428  173.71209  -1.604 0.110473    
+regionfrontal:Cluster1                0.08333    0.09133 3236.00019   0.912 0.361600    
+regioninsula:Cluster1                -0.01667    0.09133 3236.00019  -0.182 0.855210    
+regionmesial_temp:Cluster1           -0.05000    0.09133 3236.00019  -0.547 0.584094    
+regionoccipital:Cluster1             -0.01667    0.09133 3236.00019  -0.182 0.855210    
+regionparietal:Cluster1              -0.08333    0.09133 3236.00019  -0.912 0.361600    
+regiontemporal_lobe_other:Cluster1   -0.23333    0.09133 3236.00019  -2.555 0.010669 *  
+regionfrontal:Cluster2               -0.05833    0.09133 3236.00019  -0.639 0.523054    
+regioninsula:Cluster2                -0.09167    0.09133 3236.00019  -1.004 0.315601    
+regionmesial_temp:Cluster2           -0.19167    0.09133 3236.00019  -2.099 0.035927 *  
+regionoccipital:Cluster2             -0.04167    0.09133 3236.00019  -0.456 0.648259    
+regionparietal:Cluster2              -0.35833    0.09133 3236.00019  -3.924 8.91e-05 ***
+regiontemporal_lobe_other:Cluster2   -0.35000    0.09133 3236.00019  -3.832 0.000129 ***
+regionfrontal:Cluster3               -0.10000    0.09133 3236.00019  -1.095 0.273625    
+regioninsula:Cluster3                -0.03333    0.09133 3236.00019  -0.365 0.715150    
+regionmesial_temp:Cluster3           -0.25000    0.09133 3236.00019  -2.737 0.006228 ** 
+regionoccipital:Cluster3             -0.06667    0.09133 3236.00019  -0.730 0.465468    
+regionparietal:Cluster3              -0.31667    0.09133 3236.00019  -3.467 0.000533 ***
+regiontemporal_lobe_other:Cluster3   -0.36667    0.09133 3236.00019  -4.015 6.09e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+A data.frame with 4 labelled columns:
+
+                                   region Cluster estimate                ci statistic p.value
+0_cingulate                     cingulate       0     0.36  $[0.08$, $0.64]$      2.49    .013
+1_cingulate                                     1     0.40  $[0.12$, $0.68]$      2.78    .005
+2_cingulate                                     2     0.20 $[-0.08$, $0.48]$      1.39    .165
+3_cingulate                                     3     0.18 $[-0.11$, $0.46]$      1.22    .224
+0_frontal                         frontal       0     0.63  $[0.35$, $0.92]$      4.40  < .001
+1_frontal                                       1     0.76  $[0.48$, $1.04]$      5.27  < .001
+2_frontal                                       2     0.42  $[0.13$, $0.70]$      2.89    .004
+3_frontal                                       3     0.35  $[0.07$, $0.63]$      2.43    .015
+0_insula                           insula       0     0.43  $[0.14$, $0.71]$      2.95    .003
+1_insula                                        1     0.45  $[0.17$, $0.73]$      3.13    .002
+2_insula                                        2     0.18 $[-0.11$, $0.46]$      1.22    .224
+3_insula                                        3     0.21 $[-0.07$, $0.49]$      1.45    .148
+0_mesial_temp                 mesial_temp       0     0.82  $[0.53$, $1.10]$      5.67  < .001
+1_mesial_temp                                   1     0.81  $[0.53$, $1.09]$      5.61  < .001
+2_mesial_temp                                   2     0.47  $[0.18$, $0.75]$      3.24    .001
+3_mesial_temp                                   3     0.38  $[0.10$, $0.67]$      2.66    .008
+0_occipital                     occipital       0     0.41  $[0.13$, $0.69]$      2.84    .005
+1_occipital                                     1     0.43  $[0.15$, $0.72]$      3.01    .003
+2_occipital                                     2     0.21 $[-0.07$, $0.49]$      1.45    .148
+3_occipital                                     3     0.16 $[-0.12$, $0.44]$      1.10    .272
+0_parietal                       parietal       0     1.19  $[0.91$, $1.47]$      8.28  < .001
+1_parietal                                      1     1.15  $[0.87$, $1.43]$      7.99  < .001
+2_parietal                                      2     0.68  $[0.39$, $0.96]$      4.69  < .001
+3_parietal                                      3     0.69  $[0.41$, $0.97]$      4.80  < .001
+0_temporal_lobe_other temporal_lobe_other       0     0.71  $[0.43$, $0.99]$      4.92  < .001
+1_temporal_lobe_other                           1     0.52  $[0.23$, $0.80]$      3.59  < .001
+2_temporal_lobe_other                           2     0.20 $[-0.08$, $0.48]$      1.39    .165
+3_temporal_lobe_other                           3     0.16 $[-0.12$, $0.44]$      1.10    .272
+
+estimate : $M$ 
+ci       : 95\% CI 
+statistic: $t($\infty$)$ 
+p.value  : $p$ A data.frame with 5 labelled columns:
+
+                                     region contrast estimate                ci statistic p.value
+cingulate_0_1                     cingulate    0 - 1    -0.04 $[-0.34$, $0.26]$     -0.36    .999
+cingulate_0_2                                  0 - 2     0.16 $[-0.14$, $0.46]$      1.39    .663
+cingulate_0_3                                  0 - 3     0.18 $[-0.12$, $0.48]$      1.60    .498
+cingulate_1_2                                  1 - 2     0.20 $[-0.10$, $0.50]$      1.75    .394
+cingulate_1_3                                  1 - 3     0.23 $[-0.08$, $0.53]$      1.97    .260
+cingulate_2_3                                  2 - 3     0.03 $[-0.28$, $0.33]$      0.22  > .999
+frontal_0_1                         frontal    0 - 1    -0.13 $[-0.43$, $0.18]$     -1.09    .854
+frontal_0_2                                    0 - 2     0.22 $[-0.08$, $0.52]$      1.90    .301
+frontal_0_3                                    0 - 3     0.28 $[-0.02$, $0.58]$      2.48    .076
+frontal_1_2                                    1 - 2     0.34  $[0.04$, $0.64]$      2.99    .017
+frontal_1_3                                    1 - 3     0.41  $[0.11$, $0.71]$      3.57    .002
+frontal_2_3                                    2 - 3     0.07 $[-0.23$, $0.37]$      0.58    .993
+insula_0_1                           insula    0 - 1    -0.03 $[-0.33$, $0.28]$     -0.22  > .999
+insula_0_2                                     0 - 2     0.25 $[-0.05$, $0.55]$      2.19    .160
+insula_0_3                                     0 - 3     0.22 $[-0.08$, $0.52]$      1.90    .301
+insula_1_2                                     1 - 2     0.28 $[-0.03$, $0.58]$      2.41    .093
+insula_1_3                                     1 - 3     0.24 $[-0.06$, $0.54]$      2.11    .190
+insula_2_3                                     2 - 3    -0.03 $[-0.33$, $0.27]$     -0.29  > .999
+mesial_temp_0_1                 mesial_temp    0 - 1     0.01 $[-0.29$, $0.31]$      0.07  > .999
+mesial_temp_0_2                                0 - 2     0.35  $[0.05$, $0.65]$      3.06    .013
+mesial_temp_0_3                                0 - 3     0.43  $[0.13$, $0.73]$      3.79    .001
+mesial_temp_1_2                                1 - 2     0.34  $[0.04$, $0.64]$      2.99    .017
+mesial_temp_1_3                                1 - 3     0.43  $[0.12$, $0.73]$      3.72    .001
+mesial_temp_2_3                                2 - 3     0.08 $[-0.22$, $0.38]$      0.73    .977
+occipital_0_1                     occipital    0 - 1    -0.03 $[-0.33$, $0.28]$     -0.22  > .999
+occipital_0_2                                  0 - 2     0.20 $[-0.10$, $0.50]$      1.75    .394
+occipital_0_3                                  0 - 3     0.25 $[-0.05$, $0.55]$      2.19    .160
+occipital_1_2                                  1 - 2     0.23 $[-0.08$, $0.53]$      1.97    .260
+occipital_1_3                                  1 - 3     0.28 $[-0.03$, $0.58]$      2.41    .093
+occipital_2_3                                  2 - 3     0.05 $[-0.25$, $0.35]$      0.44    .999
+parietal_0_1                       parietal    0 - 1     0.04 $[-0.26$, $0.34]$      0.36    .999
+parietal_0_2                                   0 - 2     0.52  $[0.22$, $0.82]$      4.52  < .001
+parietal_0_3                                   0 - 3     0.50  $[0.20$, $0.80]$      4.38  < .001
+parietal_1_2                                   1 - 2     0.48  $[0.17$, $0.78]$      4.16  < .001
+parietal_1_3                                   1 - 3     0.46  $[0.16$, $0.76]$      4.01  < .001
+parietal_2_3                                   2 - 3    -0.02 $[-0.32$, $0.28]$     -0.15  > .999
+temporal_lobe_other_0_1 temporal_lobe_other    0 - 1     0.19 $[-0.11$, $0.49]$      1.68    .445
+temporal_lobe_other_0_2                        0 - 2     0.51  $[0.21$, $0.81]$      4.45  < .001
+temporal_lobe_other_0_3                        0 - 3     0.55  $[0.25$, $0.85]$      4.81  < .001
+temporal_lobe_other_1_2                        1 - 2     0.32  $[0.02$, $0.62]$      2.77    .033
+temporal_lobe_other_1_3                        1 - 3     0.36  $[0.06$, $0.66]$      3.14    .010
+temporal_lobe_other_2_3                        2 - 3     0.04 $[-0.26$, $0.34]$      0.36    .999
+
+contrast : Contrast 
+estimate : $\Delta M$ 
+ci       : 95\% CI 
+statistic: $t($\infty$)$ 
+p.value  : $p$ 

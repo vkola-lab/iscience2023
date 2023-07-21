@@ -1,0 +1,22 @@
+{
+    "basedir": "/data2/MRI_PET_DATA/processed_images_final_",
+    "datadir": "/label",
+    "statspath": "/report",
+    "parcellation_path": "/ADNI_MRI_nii_recentered_cat12_",
+    "output_csv_combo": "./metadata/data_processed/mri3_cat12_vol_avg_combined_cox.csv",
+    "output_csv_adni_ad": "./metadata/data_processed/mri3_cat12_vol_avg_adni_ad.csv",
+    "output_csv_cn": "./metadata/data_processed/mri3_cat12_vol_avg_adni_cn.csv",
+    "input_csv_pref": "./metadata/data_processed/merged_dataframe_",
+    "rids_to_drop": ["4274"],
+    "progression_category_map": {
+        "2" : "\u003C4 years",
+        "1" : "\u003C2 year",
+        "-1": "\u22654 years"
+    },
+    "progression_category_order": [
+        "\u003C2 year",
+        "\u003C4 years",
+        "\u22654 years",
+        "Censored"
+    ]
+}

@@ -1,0 +1,112 @@
+{
+  "datadir": "./metadata/data_processed/",
+  "metadata_fi": "merged_dataframe_cox_noqc_pruned_final.csv",
+  "metadata_fi_nacc": "merged_dataframe_cox_test_pruned_final.csv",
+  "parcellation_fi": "mri3_cat12_vol_avg_cox_noqc.csv",
+  "parcellation_csf_fi": "mri3_cat12_vol_avg_csf_subcort_cox_noqc.csv",
+  "parcellation_fi_nacc": "mri3_cat12_vol_avg_cox_test.csv",
+  "parcellation_csf_fi_nacc": "mri3_cat12_vol_avg_csf_subcort_cox_test.csv",
+  "ventricles": [
+    "CSF",
+    "3thVen",
+    "4thVen",
+    "InfLatVen",
+    "LatVen"
+  ],
+  "mlp_csf": {
+    "fil_num": 25,
+    "drop_rate": 0.5,
+    "learning_rate": 0.001,
+    "weight_decay": 0.1,
+    "train_epochs": 2000,
+    "criterion": "cox_loss_orig",
+    "dataset": "ParcellationDataCSF",
+    "dataset_external": "ParcellationDataVentriclesNacc",
+    "model": "_MLP"
+  },
+  "mlp_csf_sur_loss": {
+    "fil_num": 100,
+    "drop_rate": 0.5,
+    "bins": [],
+    "learning_rate": 0.01,
+    "weight_decay": 0,
+    "train_epochs": 5000,
+    "criterion": "sur_loss",
+    "dataset": "ParcellationDataCSF",
+    "dataset_external": "ParcellationDataVentriclesNacc",
+    "model": "_MLP_Surv"
+  },
+  "mlp_parcellation_ventricles_sur_loss": {
+    "fil_num": 100,
+    "drop_rate": 0.5,
+    "bins": [],
+    "learning_rate": 0.01,
+    "weight_decay": 0,
+    "train_epochs": 5000,
+    "criterion": "sur_loss",
+    "dataset": "ParcellationDataVentricles",
+    "dataset_external": "ParcellationDataVentriclesNacc",
+    "model": "_MLP_Surv"
+  },
+  "mlp_parcellation_ventricles_sur_loss_age": {
+    "fil_num": 100,
+    "drop_rate": 0.5,
+    "bins": [],
+    "learning_rate": 0.01,
+    "weight_decay": 0,
+    "train_epochs": 5000,
+    "criterion": "sur_loss",
+    "dataset": "lambda seed,stage: ParcellationDataVentricles(seed,stage,add_age=True)",
+    "dataset_external": "ParcellationDataVentriclesNacc",
+    "model": "_MLP_Surv"
+  },
+    "mlp_parcellation_ventricles_sur_loss_mmse": {
+    "fil_num": 100,
+    "drop_rate": 0.5,
+    "bins": [],
+    "learning_rate": 0.01,
+    "weight_decay": 0,
+    "train_epochs": 5000,
+    "criterion": "sur_loss",
+    "dataset": "lambda seed,stage: ParcellationDataVentricles(seed,stage,add_mmse=True)",
+    "dataset_external": "ParcellationDataVentriclesNacc",
+    "model": "_MLP_Surv"
+  },
+  "mlp_parcellation_ventricles_sur_loss_age_mmse": {
+    "fil_num": 100,
+    "drop_rate": 0.5,
+    "bins": [],
+    "learning_rate": 0.01,
+    "weight_decay": 0,
+    "train_epochs": 5000,
+    "criterion": "sur_loss",
+    "dataset": "lambda seed,stage: ParcellationDataVentricles(seed,stage,add_age=True, add_mmse=True)",
+    "dataset_external": "ParcellationDataVentriclesNacc",
+    "model": "_MLP_Surv"
+  },
+
+  "mlp_parcellation_gmv_csf_sur_loss": {
+    "fil_num": 100,
+    "drop_rate": 0.5,
+    "bins": [],
+    "learning_rate": 0.01,
+    "weight_decay": 0,
+    "train_epochs": 5000,
+    "criterion": "sur_loss",
+    "dataset": "lambda seed, stage: ParcellationDataGMVCSF(seed, stage, dataset=\"ADNI\")",
+    "dataset_external": "lambda seed, stage: ParcellationDataGMVCSF(seed, stage, dataset=\"NACC\")",
+    "model": "_MLP_Surv"
+  },
+  "mlp_parcellation_gmv_highcorr": {
+    "fil_num": 100,
+    "drop_rate": 0.5,
+    "bins": [],
+    "learning_rate": 0.01,
+    "weight_decay": 0,
+    "train_epochs": 1000,
+    "criterion": "sur_loss",
+    "dataset": "lambda seed, stage: ParcellationDataCorrelated(seed, stage, correlation_coeff=0.20)",
+    "dataset_external": "ParcellationDataVentriclesNacc",
+    "model": "_MLP_Surv"
+  }
+}

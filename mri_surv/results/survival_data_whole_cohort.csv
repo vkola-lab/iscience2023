@@ -1,0 +1,9 @@
+,,Count,Count,Count,Count,Count,Count,Count,Count,Count
+Times,,0,12,24,36,48,60,72,84,96
+Dataset,Type,,,,,,,,,
+ADNI,At Risk,544,485,369,288,227,158,117,92,44
+ADNI,Censored,35,78,46,41,55,37,17,42,39
+ADNI,Observed,24,38,35,20,14,4,8,6,5
+NACC,At Risk,508,345,190,101,61,40,31,22,7
+NACC,Censored,140,115,57,26,11,6,5,13,5
+NACC,Observed,23,40,32,14,10,3,4,2,2

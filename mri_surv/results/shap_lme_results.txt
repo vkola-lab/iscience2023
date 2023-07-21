@@ -1,0 +1,46 @@
+contrast	estimate	SE	df	z.ratio	p.value
+H - IH	-7.102397949994405e-4	6.311586784341902e-4	Inf	-1.1252951425169955	0.836410296986924
+H - IL	-0.0021117631944313157	6.909423620043885e-4	Inf	-3.0563521800938624	0.013367803785214405
+H - L	-0.004788139413248186	6.336176750739163e-4	Inf	-7.556827408088976	2.4780177909633494e-13
+IH - IL	-0.0014015233994318752	6.68365421394442e-4	Inf	-2.096941814416149	0.19746192473143387
+IH - L	-0.004077899618248745	6.326499497453637e-4	Inf	-6.445744000912456	6.902078908410658e-10
+IL - L	-0.0026763762188168703	7.123541737782426e-4	Inf	-3.7570864568978184	0.0010309755533808307
+H	0.13665827998456417	8.281444764721113e-4	Inf	0.13503514663668306	0.13828141333244529
+IH	0.1373685197795636	8.285543900897978e-4	Inf	0.13574458301575504	0.13899245654337217
+IL	0.1387700431789955	8.597747573490217e-4	Inf	0.13708491561977476	0.14045517073821623
+L	0.14144641939781236	8.262373818998185e-4	Inf	0.13982702388660806	0.14306581490901665
+
+> print(summary(mdl))
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: "logShap ~ Cluster + (1|RID) + (1|Region)"
+   Data: tb
+
+REML criterion at convergence: -30342.8
+
+Scaled residuals: 
+     Min       1Q   Median       3Q      Max 
+-10.0120  -0.3959  -0.0241   0.4270   9.1718 
+
+Random effects:
+ Groups   Name        Variance  Std.Dev.
+ RID      (Intercept) 4.569e-06 0.002138
+ Region   (Intercept) 1.079e-05 0.003285
+ Residual             1.419e-04 0.011913
+Number of obs: 5080, groups:  RID, 508; Region, 22
+
+Fixed effects:
+             Estimate Std. Error        df t value Pr(>|t|)    
+(Intercept) 1.367e-01  8.281e-04 3.432e+01 165.017  < 2e-16 ***
+ClusterIH   7.102e-04  6.312e-04 9.290e+02   1.125   0.2608    
+ClusterIL   2.112e-03  6.909e-04 9.516e+02   3.056   0.0023 ** 
+ClusterL    4.788e-03  6.336e-04 1.010e+03   7.557 9.24e-14 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+          (Intr) ClstIH ClstIL
+ClusterIH -0.380              
+ClusterIL -0.371  0.492       
+ClusterL  -0.386  0.500  0.424
+
+> sink()

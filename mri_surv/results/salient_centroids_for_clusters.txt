@@ -1,0 +1,543 @@
+
+
+------------------
+Shap Value
+
+
+
+----
+NACC
+
+
+
+
+Top
+
+  Cluster Idx  Region                    Centroid  Cortex
+-------------  ----------------------  ----------  --------
+            0  Cerebellum Exterior     0.00694106
+            0  Cuneus                  0.00522694  OL
+            0  Precentral Gyrus        0.00470983  FL
+            0  Postcentral Gyrus       0.00393843  PL
+            0  Parietal Operculum      0.00316763  FL
+            0  Caudate                 0.00298429  BG
+            0  Calcarine Cortex        0.00262095  OL
+            0  Middle Cingulate Gyrus  0.00238447  Cing
+            0  Occipital Pole          0.00230897  OL
+            0  Posterior Insula        0.00223975  Ins
+
+
+Bottom
+
+  Cluster Idx  Region                      Centroid  Cortex
+-------------  -----------------------  -----------  --------
+            0  Basal Forebrain          -0.00561659  SC
+            0  Angular Gyrus            -0.00628235  PL
+            0  Fusiform Gyrus           -0.00794763  TL-O
+            0  Precuneus                -0.00798605  PL
+            0  Superior Temporal Gyrus  -0.00893735  TL-O
+            0  Middle Temporal Gyrus    -0.0103982   TL-O
+            0  Inferior Temporal Gyrus  -0.0114279   TL-O
+            0  Entorhinal Area          -0.0132656   TL-M
+            0  Hippocampus              -0.0209613   TL-M
+            0  Amygdala                 -0.0241721   TL-M
+
+
+Top
+
+  Cluster Idx  Region                    Centroid  Cortex
+-------------  ----------------------  ----------  --------
+            1  Precentral Gyrus        0.010542    FL
+            1  Cuneus                  0.00519944  OL
+            1  Postcentral Gyrus       0.00515055  PL
+            1  Calcarine Cortex        0.00439843  OL
+            1  Middle Cingulate Gyrus  0.00305556  Cing
+            1  Occipital Pole          0.00287129  OL
+            1  Thalamus Proper         0.0027222   SC
+            1  Anterior Insula         0.00244597  Ins
+            1  Parietal Operculum      0.0024089   FL
+            1  Anterior Orbital Gyrus  0.00214944  FL
+
+
+Bottom
+
+  Cluster Idx  Region                                    Centroid  Cortex
+-------------  -------------------------------------  -----------  --------
+            1  Planum Temporale                       -0.00453515  TL-O
+            1  Basal Forebrain                        -0.00475378  SC
+            1  Entorhinal Area                        -0.00515088  TL-M
+            1  Superior Frontal Gyrus Medial Segment  -0.00563629  FL
+            1  Superior Frontal Gyrus                 -0.00574082  FL
+            1  Middle Temporal Gyrus                  -0.00593139  TL-O
+            1  Precuneus                              -0.00616878  PL
+            1  Superior Temporal Gyrus                -0.00628302  TL-O
+            1  Hippocampus                            -0.00768824  TL-M
+            1  Amygdala                               -0.00954996  TL-M
+
+
+Top
+
+  Cluster Idx  Region                                   Centroid  Cortex
+-------------  -------------------------------------  ----------  --------
+            2  Cerebellum Exterior                    0.00484143
+            2  Superior Frontal Gyrus                 0.00473651  FL
+            2  Superior Frontal Gyrus Medial Segment  0.00458678  FL
+            2  Calcarine Cortex                       0.00410056  OL
+            2  Angular Gyrus                          0.00330081  PL
+            2  Precuneus                              0.00321431  PL
+            2  Anterior Cingulate Gyrus               0.00297559  Cing
+            2  Supplementary Motor Cortex             0.00225432  FL
+            2  Precentral Gyrus                       0.00206685  FL
+            2  Frontal Operculum                      0.0017715   FL
+
+
+Bottom
+
+  Cluster Idx  Region                      Centroid  Cortex
+-------------  -----------------------  -----------  --------
+            2  Central Operculum        -0.0010413   FL
+            2  Medial Orbital Gyrus     -0.00113866  FL
+            2  Planum Temporale         -0.00129086  TL-O
+            2  Cerebellum White Matter  -0.0013304
+            2  Caudate                  -0.00135371  BG
+            2  Anterior Insula          -0.0015271   Ins
+            2  Gyrus Rectus             -0.00262156  FL
+            2  Amygdala                 -0.00265284  TL-M
+            2  Entorhinal Area          -0.00391245  TL-M
+            2  Middle Cingulate Gyrus   -0.00518005  Cing
+
+
+Top
+
+  Cluster Idx  Region                                   Centroid  Cortex
+-------------  -------------------------------------  ----------  --------
+            3  Hippocampus                            0.0144828   TL-M
+            3  Amygdala                               0.0107288   TL-M
+            3  Inferior Temporal Gyrus                0.0053605   TL-O
+            3  Entorhinal Area                        0.00509263  TL-M
+            3  Fusiform Gyrus                         0.00426834  TL-O
+            3  Middle Temporal Gyrus                  0.00397254  TL-O
+            3  Superior Frontal Gyrus Medial Segment  0.00345317  FL
+            3  Planum Temporale                       0.00316538  TL-O
+            3  Superior Temporal Gyrus                0.00314596  TL-O
+            3  Precuneus                              0.00230768  PL
+
+
+Bottom
+
+  Cluster Idx  Region                                Centroid  Cortex
+-------------  --------------------------------  ------------  --------
+            3  Central Operculum                 -0.000613568  FL
+            3  Anterior Insula                   -0.000622937  Ins
+            3  Cerebellum White Matter           -0.000626982
+            3  Cerebellar Vermal Lobules VI-VII  -0.000636227
+            3  Putamen                           -0.000682049  BG
+            3  Anterior Orbital Gyrus            -0.000844766  FL
+            3  Gyrus Rectus                      -0.00126369   FL
+            3  Parietal Operculum                -0.00160354   FL
+            3  Calcarine Cortex                  -0.00207237   OL
+            3  Cuneus                            -0.00289066   OL
+
+----
+ADNI
+
+
+
+
+Top
+
+  Cluster Idx  Region                     Centroid  Cortex
+-------------  -----------------------  ----------  --------
+            0  Cerebellum Exterior      0.00325934
+            0  Cuneus                   0.00279346  OL
+            0  Cerebellum White Matter  0.00230578
+            0  Gyrus Rectus             0.00216321  FL
+            0  Anterior Insula          0.00176469  Ins
+            0  Posterior Insula         0.0017295   Ins
+            0  Cerebral White Matter    0.00170346  SC
+            0  Medial Orbital Gyrus     0.00163557  FL
+            0  Middle Cingulate Gyrus   0.00162712  Cing
+            0  Anterior Orbital Gyrus   0.00157116  FL
+
+
+Bottom
+
+  Cluster Idx  Region                      Centroid  Cortex
+-------------  -----------------------  -----------  --------
+            0  Angular Gyrus            -0.00378701  PL
+            0  Precuneus                -0.00400241  PL
+            0  Basal Forebrain          -0.00441471  SC
+            0  Fusiform Gyrus           -0.00647553  TL-O
+            0  Superior Temporal Gyrus  -0.00658498  TL-O
+            0  Middle Temporal Gyrus    -0.00736399  TL-O
+            0  Inferior Temporal Gyrus  -0.00941732  TL-O
+            0  Entorhinal Area          -0.010714    TL-M
+            0  Hippocampus              -0.0175322   TL-M
+            0  Amygdala                 -0.0186158   TL-M
+
+
+Top
+
+  Cluster Idx  Region                    Centroid  Cortex
+-------------  ----------------------  ----------  --------
+            1  Precentral Gyrus        0.00409405  FL
+            1  Cuneus                  0.00360273  OL
+            1  Parietal Operculum      0.00360042  FL
+            1  Middle Cingulate Gyrus  0.00359519  Cing
+            1  Anterior Orbital Gyrus  0.00325355  FL
+            1  Postcentral Gyrus       0.00301582  PL
+            1  Gyrus Rectus            0.00232831  FL
+            1  Medial Orbital Gyrus    0.00202468  FL
+            1  Calcarine Cortex        0.00173642  OL
+            1  Anterior Insula         0.00169886  Ins
+
+
+Bottom
+
+  Cluster Idx  Region                                    Centroid  Cortex
+-------------  -------------------------------------  -----------  --------
+            1  Superior Temporal Gyrus                -0.0034201   TL-O
+            1  Amygdala                               -0.00348556  TL-M
+            1  Middle Temporal Gyrus                  -0.00369058  TL-O
+            1  Planum Temporale                       -0.00391715  TL-O
+            1  Anterior Cingulate Gyrus               -0.00404277  Cing
+            1  Supplementary Motor Cortex             -0.00407427  FL
+            1  Precuneus                              -0.00446975  PL
+            1  Hippocampus                            -0.00504664  TL-M
+            1  Superior Frontal Gyrus Medial Segment  -0.00521545  FL
+            1  Superior Frontal Gyrus                 -0.00722958  FL
+
+
+Top
+
+  Cluster Idx  Region                                   Centroid  Cortex
+-------------  -------------------------------------  ----------  --------
+            2  Superior Frontal Gyrus                 0.00714869  FL
+            2  Supplementary Motor Cortex             0.00406333  FL
+            2  Hippocampus                            0.00388955  TL-M
+            2  Precuneus                              0.00386218  PL
+            2  Anterior Cingulate Gyrus               0.00375621  Cing
+            2  Superior Frontal Gyrus Medial Segment  0.00365432  FL
+            2  Calcarine Cortex                       0.00347079  OL
+            2  Angular Gyrus                          0.00344859  PL
+            2  Superior Temporal Gyrus                0.00284466  TL-O
+            2  Amygdala                               0.00267759  TL-M
+
+
+Bottom
+
+  Cluster Idx  Region                        Centroid  Cortex
+-------------  ------------------------  ------------  --------
+            2  Superior Parietal Lobule  -0.000910121  PL
+            2  Anterior Insula           -0.00107208   Ins
+            2  Posterior Insula          -0.00120348   Ins
+            2  Anterior Orbital Gyrus    -0.00127978   FL
+            2  Medial Orbital Gyrus      -0.00134799   FL
+            2  Gyrus Rectus              -0.00149264   FL
+            2  Precentral Gyrus          -0.0016298    FL
+            2  Postcentral Gyrus         -0.00248463   PL
+            2  Caudate                   -0.00262903   BG
+            2  Middle Cingulate Gyrus    -0.00370546   Cing
+
+
+Top
+
+  Cluster Idx  Region                                   Centroid  Cortex
+-------------  -------------------------------------  ----------  --------
+            3  Hippocampus                            0.0152784   TL-M
+            3  Amygdala                               0.0138785   TL-M
+            3  Entorhinal Area                        0.00789356  TL-M
+            3  Inferior Temporal Gyrus                0.00675353  TL-O
+            3  Middle Temporal Gyrus                  0.00555152  TL-O
+            3  Superior Temporal Gyrus                0.00541404  TL-O
+            3  Fusiform Gyrus                         0.0051057   TL-O
+            3  Planum Temporale                       0.00403705  TL-O
+            3  Precuneus                              0.00375063  PL
+            3  Superior Frontal Gyrus Medial Segment  0.00332937  FL
+
+
+Bottom
+
+  Cluster Idx  Region                       Centroid  Cortex
+-------------  -----------------------  ------------  --------
+            3  Cerebellum White Matter  -0.000739002
+            3  Posterior Insula         -0.000931319  Ins
+            3  Cerebellum Exterior      -0.000944384
+            3  Gyrus Rectus             -0.00102264   FL
+            3  Precentral Gyrus         -0.00115362   FL
+            3  Middle Cingulate Gyrus   -0.00138607   Cing
+            3  Anterior Insula          -0.00181553   Ins
+            3  Parietal Operculum       -0.00236848   FL
+            3  Calcarine Cortex         -0.00279884   OL
+            3  Cuneus                   -0.00329484   OL
+
+------------------
+Gray Matter Vol
+
+
+
+----
+NACC
+
+
+
+
+Top
+
+  Cluster Idx  Region                              Centroid  Cortex
+-------------  --------------------------------  ----------  --------
+            0  Brainstem                          0.486377
+            0  Cerebral White Matter              0.149472   SC
+            0  Cerebellar Vermal Lobules I-V      0.117001
+            0  Optic Chiasm                       0.0851213
+            0  Pallidum                           0.082155   BG
+            0  Postcentral Gyrus Medial Segment   0.0128411  PL
+            0  Cerebellar Vermal Lobules VI-VII  -0.133616
+            0  Precentral Gyrus Medial Segment   -0.148354   FL
+            0  Supplementary Motor Cortex        -0.15396    FL
+            0  Anterior Orbital Gyrus            -0.21195    FL
+
+
+Bottom
+
+  Cluster Idx  Region                      Centroid  Cortex
+-------------  ------------------------  ----------  --------
+            0  Occipital Fusiform Gyrus   -0.920755  OL
+            0  Inferior Occipital Gyrus   -0.930145  OL
+            0  Hippocampus                -0.930542  TL-M
+            0  Fusiform Gyrus             -0.939058  TL-O
+            0  Parahippocampus Gyrus      -0.968103  TL-M
+            0  Occipital Pole             -0.981673  OL
+            0  Inferior Temporal Gyrus    -1.00243   TL-O
+            0  Entorhinal Area            -1.0703    TL-M
+            0  Middle Temporal Gyrus      -1.07796   TL-O
+            0  Amygdala                   -1.12581   TL-M
+
+
+Top
+
+  Cluster Idx  Region                              Centroid  Cortex
+-------------  --------------------------------  ----------  --------
+            1  Brainstem                          0.571034
+            1  Cerebral White Matter              0.30527    SC
+            1  Pallidum                           0.248977   BG
+            1  Cerebellar Vermal Lobules VIII-X   0.232327
+            1  Cerebellar Vermal Lobules I-V      0.225587
+            1  Cerebellar Vermal Lobules VI-VII   0.176979
+            1  Cerebellum White Matter            0.12671
+            1  Optic Chiasm                       0.120601
+            1  Postcentral Gyrus Medial Segment   0.0461313  PL
+            1  Caudate                           -0.199892   BG
+
+
+Bottom
+
+  Cluster Idx  Region                                           Centroid  Cortex
+-------------  ---------------------------------------------  ----------  --------
+            1  Middle Temporal Gyrus                           -0.739208  TL-O
+            1  Central Operculum                               -0.741574  FL
+            1  Lateral Orbital Gyrus                           -0.776508  FL
+            1  Frontal Operculum                               -0.853253  FL
+            1  Postcentral Gyrus                               -0.85394   PL
+            1  Opercular Part of the Inferior Frontal Gyrus    -0.881105  FL
+            1  Triangular Part of the Inferior Frontal Gyrus   -0.924264  FL
+            1  Thalamus Proper                                 -0.947504  SC
+            1  Precentral Gyrus                                -1.01722   FL
+            1  Occipital Pole                                  -1.16771   OL
+
+
+Top
+
+  Cluster Idx  Region                                   Centroid  Cortex
+-------------  -------------------------------------  ----------  --------
+            2  Middle Cingulate Gyrus                   0.710439  Cing
+            2  Gyrus Rectus                             0.650309  FL
+            2  Anterior Cingulate Gyrus                 0.528917  Cing
+            2  Superior Frontal Gyrus Medial Segment    0.4427    FL
+            2  Subcallosal Area                         0.416833  FL
+            2  Middle Frontal Gyrus                     0.386418  FL
+            2  Medial Frontal Cortex                    0.371222  FL
+            2  Brainstem                                0.357432
+            2  Superior Parietal Lobule                 0.346088  PL
+            2  Angular Gyrus                            0.336378  PL
+
+
+Bottom
+
+  Cluster Idx  Region                      Centroid  Cortex
+-------------  ------------------------  ----------  --------
+            2  Posterior Orbital Gyrus    -0.235628  FL
+            2  Occipital Fusiform Gyrus   -0.248286  OL
+            2  Parahippocampus Gyrus      -0.310711  TL-M
+            2  Superior Occipital Gyrus   -0.319712  OL
+            2  Entorhinal Area            -0.327841  TL-M
+            2  Thalamus Proper            -0.353957  SC
+            2  Lingual Gyrus              -0.383747  OL
+            2  Calcarine Cortex           -0.425036  OL
+            2  Cerebellum Exterior        -0.499069
+            2  Occipital Pole             -0.935523  OL
+
+
+Top
+
+  Cluster Idx  Region                       Centroid  Cortex
+-------------  -------------------------  ----------  --------
+            3  Hippocampus                  0.610423  TL-M
+            3  Fusiform Gyrus               0.530758  TL-O
+            3  Inferior Temporal Gyrus      0.494721  TL-O
+            3  Amygdala                     0.488939  TL-M
+            3  Occipital Fusiform Gyrus     0.462659  OL
+            3  Inferior Occipital Gyrus     0.457499  OL
+            3  Middle Temporal Gyrus        0.450478  TL-O
+            3  Transverse Temporal Gyrus    0.450078  TL-O
+            3  Parahippocampus Gyrus        0.446471  TL-M
+            3  Planum Polare                0.441025  TL-O
+
+
+Bottom
+
+  Cluster Idx  Region                              Centroid  Cortex
+-------------  --------------------------------  ----------  --------
+            3  Cerebellar Vermal Lobules I-V     -0.0483945
+            3  Cerebellar Vermal Lobules VIII-X  -0.0632486
+            3  Cerebellum Exterior               -0.0691227
+            3  Occipital Pole                    -0.161095   OL
+            3  Precentral Gyrus Medial Segment   -0.197848   FL
+            3  Putamen                           -0.212204   BG
+            3  Cerebral White Matter             -0.251081   SC
+            3  Precentral Gyrus                  -0.256763   FL
+            3  Caudate                           -0.321971   BG
+            3  Pallidum                          -0.360903   BG
+
+----
+ADNI
+
+
+
+
+Top
+
+  Cluster Idx  Region                              Centroid  Cortex
+-------------  --------------------------------  ----------  --------
+            0  Cerebral White Matter              0.20099    SC
+            0  Pallidum                           0.0852824  BG
+            0  Precentral Gyrus Medial Segment    0.0316815  FL
+            0  Calcarine Cortex                   0.0218558  OL
+            0  Supplementary Motor Cortex        -0.0463249  FL
+            0  Cerebellar Vermal Lobules I-V     -0.0546084
+            0  Postcentral Gyrus Medial Segment  -0.0741305  PL
+            0  Cerebellar Vermal Lobules VI-VII  -0.0991056
+            0  Precentral Gyrus                  -0.104232   FL
+            0  Optic Chiasm                      -0.1054
+
+
+Bottom
+
+  Cluster Idx  Region                     Centroid  Cortex
+-------------  -----------------------  ----------  --------
+            0  Middle Occipital Gyrus    -0.681702  OL
+            0  Superior Temporal Gyrus   -0.70069   TL-O
+            0  Temporal Pole             -0.778004  TL-O
+            0  Hippocampus               -0.808141  TL-M
+            0  Middle Temporal Gyrus     -0.814294  TL-O
+            0  Parahippocampus Gyrus     -0.828627  TL-M
+            0  Inferior Temporal Gyrus   -0.845585  TL-O
+            0  Fusiform Gyrus            -0.854243  TL-O
+            0  Entorhinal Area           -0.87369   TL-M
+            0  Amygdala                  -0.88271   TL-M
+
+
+Top
+
+  Cluster Idx  Region                              Centroid  Cortex
+-------------  --------------------------------  ----------  --------
+            1  Cerebellar Vermal Lobules I-V      0.328435
+            1  Cerebellar Vermal Lobules VIII-X   0.321201
+            1  Pallidum                           0.268173   BG
+            1  Cerebellar Vermal Lobules VI-VII   0.266424
+            1  Brainstem                          0.245478
+            1  Cerebellum Exterior                0.199077
+            1  Optic Chiasm                       0.132279
+            1  Cerebellum White Matter            0.113263
+            1  Cerebral White Matter              0.0312367  SC
+            1  Putamen                           -0.0444543  BG
+
+
+Bottom
+
+  Cluster Idx  Region                                           Centroid  Cortex
+-------------  ---------------------------------------------  ----------  --------
+            1  Lateral Orbital Gyrus                           -0.606256  FL
+            1  Opercular Part of the Inferior Frontal Gyrus    -0.609777  FL
+            1  Gyrus Rectus                                    -0.61368   FL
+            1  Transverse Temporal Gyrus                       -0.617925  TL-O
+            1  Medial Frontal Cortex                           -0.63556   FL
+            1  Medial Orbital Gyrus                            -0.639177  FL
+            1  Anterior Cingulate Gyrus                        -0.649409  Cing
+            1  Middle Frontal Gyrus                            -0.658205  FL
+            1  Frontal Operculum                               -0.714163  FL
+            1  Triangular Part of the Inferior Frontal Gyrus   -0.718919  FL
+
+
+Top
+
+  Cluster Idx  Region                        Centroid  Cortex
+-------------  --------------------------  ----------  --------
+            2  Middle Cingulate Gyrus        0.594598  Cing
+            2  Anterior Cingulate Gyrus      0.584532  Cing
+            2  Caudate                       0.580029  BG
+            2  Middle Frontal Gyrus          0.571567  FL
+            2  Accumbens                     0.518245  BG
+            2  Supplementary Motor Cortex    0.515854  FL
+            2  Postcentral Gyrus             0.510731  PL
+            2  Superior Frontal Gyrus        0.509054  FL
+            2  Medial Frontal Cortex         0.506183  FL
+            2  Supramarginal Gyrus           0.471583  PL
+
+
+Bottom
+
+  Cluster Idx  Region                              Centroid  Cortex
+-------------  --------------------------------  ----------  --------
+            2  Cerebellum Exterior               -0.0942624
+            2  Occipital Fusiform Gyrus          -0.106741   OL
+            2  Cerebellar Vermal Lobules I-V     -0.142841
+            2  Lingual Gyrus                     -0.147154   OL
+            2  Cerebellar Vermal Lobules VI-VII  -0.160831
+            2  Brainstem                         -0.172017
+            2  Optic Chiasm                      -0.176741
+            2  Occipital Pole                    -0.185932   OL
+            2  Cerebellar Vermal Lobules VIII-X  -0.261608
+            2  Calcarine Cortex                  -0.426757   OL
+
+
+Top
+
+  Cluster Idx  Region                      Centroid  Cortex
+-------------  ------------------------  ----------  --------
+            3  Inferior Temporal Gyrus     0.710748  TL-O
+            3  Middle Temporal Gyrus       0.695048  TL-O
+            3  Fusiform Gyrus              0.687781  TL-O
+            3  Occipital Fusiform Gyrus    0.686003  OL
+            3  Hippocampus                 0.677965  TL-M
+            3  Entorhinal Area             0.675999  TL-M
+            3  Amygdala                    0.659865  TL-M
+            3  Parahippocampus Gyrus       0.633226  TL-M
+            3  Temporal Pole               0.632484  TL-O
+            3  Lingual Gyrus               0.621014  OL
+
+
+Bottom
+
+  Cluster Idx  Region                               Centroid  Cortex
+-------------  --------------------------------  -----------  --------
+            3  Putamen                            0.0545836   BG
+            3  Cerebellar Vermal Lobules VIII-X   0.0508965
+            3  Precentral Gyrus Medial Segment    0.035384    FL
+            3  Brainstem                          0.0271421
+            3  Cerebellar Vermal Lobules VI-VII   0.00408709
+            3  Postcentral Gyrus Medial Segment  -0.0171472   PL
+            3  Cerebellar Vermal Lobules I-V     -0.0632835
+            3  Caudate                           -0.111297    BG
+            3  Pallidum                          -0.184193    BG
+            3  Cerebral White Matter             -0.238479    SC

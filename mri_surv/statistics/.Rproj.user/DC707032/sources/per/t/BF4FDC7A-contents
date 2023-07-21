@@ -1,0 +1,165 @@
+# init ----------------------------
+library(dplyr)
+library(tibble)
+library(readr)
+library(tidyr)
+library(broom)
+library(ggplot2)
+library(gridExtra)
+library(sjPlot)
+library(purrr)
+
+setwd('/Users/mromano/research/mri-surv-dev/mri_surv/')
+
+bar.tibble <- read_csv('./metadata/data_processed/masked_shap_brains_rid_lobe_mn.csv',
+               col_select = c('Region','Shap','Lobe','RID','Cluster'),
+               col_types = cols(
+                 Region=col_factor(),
+                 Shap=col_number(),
+                 Lobe=col_factor(),
+                 Cluster=col_factor(),
+                 RID=col_factor()
+               ))
+
+bar.tibble$Lobe = recode(bar.tibble$Lobe,
+ 'Basal-Ganglia'='BG',
+ 'Subcortical'='SC',
+ 'Insula'='Ins',
+ 'TL'='TL-O', 
+ 'Limbic-Cing'='Cing')
+
+
+bar.tibble$Cortex <- bar.tibble$Lobe
+
+bar.tibble$Cortex <- as.character(bar.tibble$Cortex)
+
+lev <- unique(bar.tibble$Cortex)
+
+bar.tibble$Cortex <- factor(bar.tibble$Cortex, levels=lev)
+
+write_csv(bar.tibble, './metadata/data_processed/shap_cnn_barplot.csv')
+
+# Now plot ---------------------------------------------------
+
+library(rsample)
+
+library(RColorBrewer)
+colors <- brewer.pal(10,'Paired')
+
+cortex.names <- unique(bar.tibble$Cortex)
+
+for (subtype in unique(bar.tibble$Cluster)) {
+  tb <- bar.tibble %>%
+    filter(Cluster == subtype) %>%
+    drop_na() %>%
+    select(-Cluster, -Region, -Cortex, -RID) %>%
+    ungroup()
+
+  st <- tb %>%
+    group_by(Lobe) %>%
+    summarize(Dat=mean_cl_boot(Shap, conf.int=.95, B=10000))
+}
+
+bar.tibble$Cluster <- factor(bar.tibble$Cluster, levels = c('L','IL','IH','H'))
+
+  ggobj <- ggplot(bar.tibble, aes(x=Lobe, y=Shap, fill=Lobe)) +
+    facet_grid(cols=vars(Cluster)) +
+    stat_summary(fun=mean, geom="bar", na.rm=FALSE, show.legend=TRUE) +
+    stat_summary(fun.data=mean_cl_boot, fun.args=list(conf.int=.95, B=10000), size=1, geom = "linerange")+
+    theme(
+      axis.text.y = element_text(size=12),
+      axis.title.y.left = element_text(size=12),
+      strip.text.x = element_text(size=12, face= 'bold'),
+      legend.text = element_text(size=10),
+      legend.title = element_text(size=12),
+      axis.text.x = element_blank(),
+      panel.background = element_blank(),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      axis.ticks.x=element_blank(),
+      aspect.ratio = 1.5
+    ) + # coord_cartesian(ylim=c(-4e-06, 5e-06))+
+    xlab('')+
+   scale_fill_manual(values = colors, breaks=cortex.names)
+  ggsave(plot = ggobj, paste0('./figures/bar_cnn_all.svg'),
+         device = 'svg', dpi='retina', width=10.0, height=6.68, units='in')
+
+# ----------------------
+
+tb.mlp <- read_csv('./results/shap_dataframe.csv',
+               col_select = c('Cluster Idx', 'Region','RID','Shap Value','Cortex'),
+               col_types = cols(
+                 Region=col_factor(),
+                 RID=col_factor(),
+                 'Shap Value'=col_number(),
+                 Cortex=col_factor(),
+                 'Cluster Idx'=col_factor()
+               ))
+
+tb.mlp$Shap <- tb.mlp$`Shap Value`
+tb.mlp$Cluster <- tb.mlp$`Cluster Idx`
+
+
+tb.mlp <- tb.mlp %>%
+  group_by(RID, Cortex, .add=TRUE) %>%
+  summarize(Shap=mean(Shap), Cluster=unique(Cluster)) %>%
+  drop_na() %>%
+  ungroup()
+
+
+tb.mlp$Cluster <- recode(
+  tb.mlp$Cluster, '0'='H','1'='IH','2'='IL','3'='L'
+)
+
+tb.mlp$Cluster <- factor(tb.mlp$Cluster, levels = c('L','IL','IH','H'))
+
+tb.mlp$Lobe <- factor(tb.mlp$Cortex, levels=lev)
+
+p_val <- function(split) {
+  split <- as.data.frame(split)$Shap
+  return(2*min(mean(split<=0), mean(split>=0)))
+}
+
+for (subtype in unique(tb.mlp$Cluster)) {
+  tb <- tb.mlp %>%
+    filter(Cluster == subtype) %>%
+    drop_na() %>%
+    select(-Cluster, -RID, -Lobe) %>%
+    ungroup()
+  
+  set.seed(27)
+  
+  bs <- bootstraps(tb, 100)
+  
+  st <- tb %>%
+    group_by(Cortex) %>%
+    summarize(
+      Dat=mean_cl_boot(Shap, conf.int=.95, B=10000),
+      
+      )
+  
+  boots <- bs %>%
+    mutate(p=map(splits, p_val))
+}
+
+ggobj <- ggplot(tb.mlp, aes(x=Lobe, y=Shap, fill=Lobe)) +
+  facet_grid(cols=vars(Cluster)) +
+  stat_summary(fun=mean, geom="bar", na.rm=FALSE, show.legend=TRUE) +
+  stat_summary(fun.data=mean_cl_boot, fun.args=list(conf.int=.95, B=10000), size=1, geom = "linerange")+
+  theme(
+    axis.text.y = element_text(size=12),
+    axis.title.y.left = element_text(size=12),
+    strip.text.x = element_blank(),
+    legend.text = element_text(size=10),
+    legend.title = element_text(size=12),
+    axis.text.x = element_blank(),
+    panel.background = element_blank(),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.ticks.x=element_blank(),
+    aspect.ratio = 0.75
+  ) + # coord_cartesian(ylim=c(-4e-06, 5e-06))+
+  xlab('')+
+  scale_fill_manual(values = colors, breaks=cortex.names)
+ggsave(plot = ggobj, paste0('./figures/bar_mlp_all.svg'),
+       device = 'svg', dpi='retina', width=13.0, height=6.68, units='in')

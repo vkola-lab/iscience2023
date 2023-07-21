@@ -1,0 +1,11 @@
+figure.titlesize : 32
+axes.titlesize : 32
+axes.labelsize : 32
+lines.linewidth : 3
+lines.markersize : 5
+xtick.labelsize : 32
+ytick.labelsize : 32
+svg.fonttype : none
+savefig.dpi : 300
+figure.autolayout : True
+figure.frameon : False

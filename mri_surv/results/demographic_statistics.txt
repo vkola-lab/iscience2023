@@ -1,0 +1,563 @@
+Statistics
+----------------
+Datasets CPH model:
+	Proportional hazard test: 
+<lifelines.StatisticalResult: proportional_hazard_test>
+    time_transform = rank
+ null_distribution = chi squared
+degrees_of_freedom = 1
+             model = <lifelines.CoxPHFitter: fitted with 1052 total observations, 768 right-censored observations>
+         test_name = proportional_hazard_test
+
+---
+          test_statistic      p  -log2(p)
+Quartile           16.27 <0.005     14.15
+	CPH coefficient               coef  exp(coef)  se(coef)  coef lower 95%  coef upper 95%  \
+covariate                                                                  
+Quartile  -0.510209    0.60037   0.12159        -0.74852       -0.271897   
+
+           exp(coef) lower 95%  exp(coef) upper 95%         z         p  \
+covariate                                                                 
+Quartile              0.473066             0.761932 -4.196151  0.000027   
+
+            -log2(p)  
+covariate             
+Quartile   15.168747  -----------------
+Comparing NACC and ADNI at different times
+	24 months: 
+<lifelines.StatisticalResult: survival_difference_at_fixed_point_in_time_test>
+ null_distribution = chi squared
+degrees_of_freedom = 1
+     point_in_time = 24
+           fitterA = <lifelines.KaplanMeierFitter:"ADNI", fitted with 544 total observations, 390 right-censored observations>
+           fitterB = <lifelines.KaplanMeierFitter:"NACC", fitted with 508 total observations, 378 right-censored observations>
+    point_estimate = log(-log(x)) difference ADNI-NACC: 24   -0.041272
+Name: NACC, dtype: float64
+         test_name = survival_difference_at_fixed_point_in_time_test
+
+---
+ test_statistic    p  -log2(p)
+           0.06 0.80      0.32
+	48 months: 
+<lifelines.StatisticalResult: survival_difference_at_fixed_point_in_time_test>
+ null_distribution = chi squared
+degrees_of_freedom = 1
+     point_in_time = 48
+           fitterA = <lifelines.KaplanMeierFitter:"ADNI", fitted with 544 total observations, 390 right-censored observations>
+           fitterB = <lifelines.KaplanMeierFitter:"NACC", fitted with 508 total observations, 378 right-censored observations>
+    point_estimate = log(-log(x)) difference ADNI-NACC: 48    0.553219
+Name: NACC, dtype: float64
+         test_name = survival_difference_at_fixed_point_in_time_test
+
+---
+ test_statistic      p  -log2(p)
+          14.56 <0.005     12.85
+------------
+ADNI, MMSE:
+Kruskal-Wallis test: MMSE
+	H=39.846614836706486
+	df=3
+	p=1.148335979776741e-08
+	n_x=390,55,37,62
+	n_x_nan=0,0,0,0
+
+	 Dunn test w/ bonferroni correction
+	Mean ranks: Time to progress to AD
+<2 years    171.161290
+<4 years    228.409091
+≥4 years    266.527027
+Censored    295.394872
+	 ['<2 years' '<4 years' 0.2715457330853091]
+	 ['<2 years' '≥4 years' 0.017634259679424183]
+	 ['<2 years' 'Censored' 2.3635620719396145e-08]
+	 ['<4 years' '≥4 years' 1.0]
+	 ['<4 years' 'Censored' 0.015523277818970088]
+	 ['≥4 years' 'Censored' 1.0]
+
+	 Dunn test w/ BH correction
+	Mean ranks: Time to progress to AD
+<2 years    171.161290
+<4 years    228.409091
+≥4 years    266.527027
+Censored    295.394872
+	 ['<2 years' '<4 years' 0.06788643327132729]
+	 ['<2 years' '≥4 years' 0.005878086559808061]
+	 ['<2 years' 'Censored' 2.3635620719396145e-08]
+	 ['<4 years' '≥4 years' 0.27694860328778115]
+	 ['<4 years' 'Censored' 0.005878086559808061]
+	 ['≥4 years' 'Censored' 0.27694860328778115]
+------------
+ADNI, Age (yrs):
+Kruskal-Wallis test: Age (yrs)
+	H=9.063526779910392
+	df=3
+	p=0.0284580789483135
+	n_x=390,55,37,62
+	n_x_nan=0,0,0,0
+
+	 Dunn test w/ bonferroni correction
+	Mean ranks: Time to progress to AD
+<2 years    288.427419
+<4 years    306.736364
+≥4 years    321.121622
+Censored    260.526923
+	 ['<2 years' '<4 years' 1.0]
+	 ['<2 years' '≥4 years' 1.0]
+	 ['<2 years' 'Censored' 1.0]
+	 ['<4 years' '≥4 years' 1.0]
+	 ['<4 years' 'Censored' 0.24649916604059136]
+	 ['≥4 years' 'Censored' 0.14945570302269204]
+
+	 Dunn test w/ BH correction
+	Mean ranks: Time to progress to AD
+<2 years    288.427419
+<4 years    306.736364
+≥4 years    321.121622
+Censored    260.526923
+	 ['<2 years' '<4 years' 0.6349515499840143]
+	 ['<2 years' '≥4 years' 0.47448176631314115]
+	 ['<2 years' 'Censored' 0.38768321316530496]
+	 ['<4 years' '≥4 years' 0.6666367109518304]
+	 ['<4 years' 'Censored' 0.12324958302029568]
+	 ['≥4 years' 'Censored' 0.12324958302029568]
+------------
+ADNI, Aβ42 (pg/mL):
+Kruskal-Wallis test: Aβ42 (pg/mL)
+	H=61.82723659431919
+	df=3
+	p=2.3920897620345783e-13
+	n_x=390,55,37,62
+	n_x_nan=0,0,0,0
+
+	 Dunn test w/ bonferroni correction
+	Mean ranks: Time to progress to AD
+<2 years    180.451613
+<4 years    172.872727
+≥4 years    235.216216
+Censored    304.720513
+	 ['<2 years' '<4 years' 1.0]
+	 ['<2 years' '≥4 years' 0.5610778287752419]
+	 ['<2 years' 'Censored' 4.416321418283534e-08]
+	 ['<4 years' '≥4 years' 0.3727502823100175]
+	 ['<4 years' 'Censored' 3.453370747892366e-08]
+	 ['≥4 years' 'Censored' 0.06092446978999631]
+
+	 Dunn test w/ BH correction
+	Mean ranks: Time to progress to AD
+<2 years    180.451613
+<4 years    172.872727
+≥4 years    235.216216
+Censored    304.720513
+	 ['<2 years' '<4 years' 0.7946284264938327]
+	 ['<2 years' '≥4 years' 0.11221556575504839]
+	 ['<2 years' 'Censored' 2.208160709141767e-08]
+	 ['<4 years' '≥4 years' 0.09318757057750439]
+	 ['<4 years' 'Censored' 2.208160709141767e-08]
+	 ['≥4 years' 'Censored' 0.020308156596665437]
+------------
+ADNI, t-tau (pg/mL):
+Kruskal-Wallis test: t-tau (pg/mL)
+	H=70.96311619935791
+	df=3
+	p=2.6546489874954093e-15
+	n_x=390,55,37,62
+	n_x_nan=0,0,0,0
+
+	 Dunn test w/ bonferroni correction
+	Mean ranks: Time to progress to AD
+<2 years    374.838710
+<4 years    382.590909
+≥4 years    287.121622
+Censored    239.317949
+	 ['<2 years' '<4 years' 1.0]
+	 ['<2 years' '≥4 years' 0.04334720271709236]
+	 ['<2 years' 'Censored' 1.7173702054051905e-09]
+	 ['<4 years' '≥4 years' 0.025694504773967945]
+	 ['<4 years' 'Censored' 1.4866793020318106e-09]
+	 ['≥4 years' 'Censored' 0.46239988631999346]
+
+	 Dunn test w/ BH correction
+	Mean ranks: Time to progress to AD
+<2 years    374.838710
+<4 years    382.590909
+≥4 years    287.121622
+Censored    239.317949
+	 ['<2 years' '<4 years' 0.7900405852017738]
+	 ['<2 years' '≥4 years' 0.01083680067927309]
+	 ['<2 years' 'Censored' 8.586851027025954e-10]
+	 ['<4 years' '≥4 years' 0.008564834924655982]
+	 ['<4 years' 'Censored' 8.586851027025954e-10]
+	 ['≥4 years' 'Censored' 0.09247997726399869]
+------------
+ADNI, p-tau (pg/mL):
+Kruskal-Wallis test: p-tau (pg/mL)
+	H=79.43557184620697
+	df=3
+	p=4.0560181051977034e-17
+	n_x=390,55,37,62
+	n_x_nan=0,0,0,0
+
+	 Dunn test w/ bonferroni correction
+	Mean ranks: Time to progress to AD
+<2 years    380.096774
+<4 years    388.718182
+≥4 years    292.162162
+Censored    237.139744
+	 ['<2 years' '<4 years' 1.0]
+	 ['<2 years' '≥4 years' 0.04249057400663171]
+	 ['<2 years' 'Censored' 1.7338208039686067e-10]
+	 ['<4 years' '≥4 years' 0.023181556064229482]
+	 ['<4 years' 'Censored' 1.2921463789274064e-10]
+	 ['≥4 years' 'Censored' 0.2511397022300742]
+
+	 Dunn test w/ BH correction
+	Mean ranks: Time to progress to AD
+<2 years    380.096774
+<4 years    388.718182
+≥4 years    292.162162
+Censored    237.139744
+	 ['<2 years' '<4 years' 0.7671446766067171]
+	 ['<2 years' '≥4 years' 0.01062264350165793]
+	 ['<2 years' 'Censored' 8.669104019843035e-11]
+	 ['<4 years' '≥4 years' 0.007727185354743161]
+	 ['<4 years' 'Censored' 8.669104019843035e-11]
+	 ['≥4 years' 'Censored' 0.050227940446014835]
+------------
+ADNI, Education (yrs):
+Kruskal-Wallis test: Education (yrs)
+	H=1.5547763499034544
+	df=3
+	p=0.6696868805912561
+	n_x=390,55,37,62
+	n_x_nan=0,0,0,0
+
+	 Dunn test w/ bonferroni correction
+	Mean ranks: Time to progress to AD
+<2 years    253.411290
+<4 years    267.463636
+≥4 years    290.364865
+Censored    274.550000
+	 ['<2 years' '<4 years' 1.0]
+	 ['<2 years' '≥4 years' 1.0]
+	 ['<2 years' 'Censored' 1.0]
+	 ['<4 years' '≥4 years' 1.0]
+	 ['<4 years' 'Censored' 1.0]
+	 ['≥4 years' 'Censored' 1.0]
+
+	 Dunn test w/ BH correction
+	Mean ranks: Time to progress to AD
+<2 years    253.411290
+<4 years    267.463636
+≥4 years    290.364865
+Censored    274.550000
+	 ['<2 years' '<4 years' 0.7498828706542208]
+	 ['<2 years' '≥4 years' 0.7498828706542208]
+	 ['<2 years' 'Censored' 0.7498828706542208]
+	 ['<4 years' '≥4 years' 0.7498828706542208]
+	 ['<4 years' 'Censored' 0.7511896326946212]
+	 ['≥4 years' 'Censored' 0.7498828706542208]
+------------
+NACC, MMSE:
+Kruskal-Wallis test: MMSE
+	H=9.93502129008588
+	df=3
+	p=0.019126630981831694
+	n_x=112,34,21,33
+	n_x_nan=266,12,0,30
+
+	 Dunn test w/ bonferroni correction
+	Mean ranks: Time to progress to AD
+<2 years     72.696970
+<4 years    100.323529
+≥4 years    112.714286
+Censored    106.455357
+	 ['<2 years' '<4 years' 0.29087726193438557]
+	 ['<2 years' '≥4 years' 0.07409322924857295]
+	 ['<2 years' 'Censored' 0.01759937923932525]
+	 ['<4 years' '≥4 years' 1.0]
+	 ['<4 years' 'Censored' 1.0]
+	 ['≥4 years' 'Censored' 1.0]
+
+	 Dunn test w/ BH correction
+	Mean ranks: Time to progress to AD
+<2 years     72.696970
+<4 years    100.323529
+≥4 years    112.714286
+Censored    106.455357
+	 ['<2 years' '<4 years' 0.09695908731146186]
+	 ['<2 years' '≥4 years' 0.037046614624286475]
+	 ['<2 years' 'Censored' 0.01759937923932525]
+	 ['<4 years' '≥4 years' 0.645966659358638]
+	 ['<4 years' 'Censored' 0.645966659358638]
+	 ['≥4 years' 'Censored' 0.645966659358638]
+------------
+NACC, Age (yrs):
+Kruskal-Wallis test: Age (yrs)
+	H=25.792138503625473
+	df=3
+	p=1.0542534334239388e-05
+	n_x=378,46,21,63
+	n_x_nan=0,0,0,0
+
+	 Dunn test w/ bonferroni correction
+	Mean ranks: Time to progress to AD
+<2 years    288.238095
+<4 years    329.619565
+≥4 years    321.571429
+Censored    236.009259
+	 ['<2 years' '<4 years' 0.8746992008566681]
+	 ['<2 years' '≥4 years' 1.0]
+	 ['<2 years' 'Censored' 0.053316118085927816]
+	 ['<4 years' '≥4 years' 1.0]
+	 ['<4 years' 'Censored' 0.00026262605887937584]
+	 ['≥4 years' 'Censored' 0.05566557090469265]
+
+	 Dunn test w/ BH correction
+	Mean ranks: Time to progress to AD
+<2 years    288.238095
+<4 years    329.619565
+≥4 years    321.571429
+Censored    236.009259
+	 ['<2 years' '<4 years' 0.21867480021416702]
+	 ['<2 years' '≥4 years' 0.44058633702697936]
+	 ['<2 years' 'Censored' 0.018555190301564217]
+	 ['<4 years' '≥4 years' 0.834973930009628]
+	 ['<4 years' 'Censored' 0.0002626260588793759]
+	 ['≥4 years' 'Censored' 0.018555190301564217]
+------------
+NACC, Aβ42 (pg/mL):
+Kruskal-Wallis test: Aβ42 (pg/mL)
+	H=5.600288600288607
+	df=3
+	p=0.13276179076740718
+	n_x=9,3,3,6
+	n_x_nan=369,43,18,57
+
+	 Dunn test w/ bonferroni correction
+	Mean ranks: Time to progress to AD
+<2 years     7.166667
+<4 years     9.333333
+≥4 years     9.666667
+Censored    14.555556
+	 ['<2 years' '<4 years' 1.0]
+	 ['<2 years' '≥4 years' 1.0]
+	 ['<2 years' 'Censored' 0.14313770702040374]
+	 ['<4 years' '≥4 years' 1.0]
+	 ['<4 years' 'Censored' 1.0]
+	 ['≥4 years' 'Censored' 1.0]
+
+	 Dunn test w/ BH correction
+	Mean ranks: Time to progress to AD
+<2 years     7.166667
+<4 years     9.333333
+≥4 years     9.666667
+Censored    14.555556
+	 ['<2 years' '<4 years' 0.7457122010614319]
+	 ['<2 years' '≥4 years' 0.7457122010614319]
+	 ['<2 years' 'Censored' 0.14313770702040374]
+	 ['<4 years' '≥4 years' 0.9475409020884772]
+	 ['<4 years' 'Censored' 0.4745116532469893]
+	 ['≥4 years' 'Censored' 0.4745116532469893]
+------------
+NACC, t-tau (pg/mL):
+Kruskal-Wallis test: t-tau (pg/mL)
+	H=3.000505378673028
+	df=3
+	p=0.39154726338355883
+	n_x=9,3,3,6
+	n_x_nan=369,43,18,57
+
+	 Dunn test w/ bonferroni correction
+	Mean ranks: Time to progress to AD
+<2 years    14.166667
+<4 years    12.500000
+≥4 years     9.833333
+Censored     8.777778
+	 ['<2 years' '<4 years' 1.0]
+	 ['<2 years' '≥4 years' 1.0]
+	 ['<2 years' 'Censored' 0.5956304238619622]
+	 ['<4 years' '≥4 years' 1.0]
+	 ['<4 years' 'Censored' 1.0]
+	 ['≥4 years' 'Censored' 1.0]
+
+	 Dunn test w/ BH correction
+	Mean ranks: Time to progress to AD
+<2 years    14.166667
+<4 years    12.500000
+≥4 years     9.833333
+Censored     8.777778
+	 ['<2 years' '<4 years' 0.7985221669844336]
+	 ['<2 years' '≥4 years' 0.736104337491255]
+	 ['<2 years' 'Censored' 0.5956304238619622]
+	 ['<4 years' '≥4 years' 0.7985221669844336]
+	 ['<4 years' 'Censored' 0.736104337491255]
+	 ['≥4 years' 'Censored' 0.7985221669844336]
+------------
+NACC, p-tau (pg/mL):
+Kruskal-Wallis test: p-tau (pg/mL)
+	H=1.0423452768729735
+	df=3
+	p=0.7910071388390264
+	n_x=9,3,3,6
+	n_x_nan=369,43,18,57
+
+	 Dunn test w/ bonferroni correction
+	Mean ranks: Time to progress to AD
+<2 years    12.333333
+<4 years    13.000000
+≥4 years    10.333333
+Censored     9.666667
+	 ['<2 years' '<4 years' 1.0]
+	 ['<2 years' '≥4 years' 1.0]
+	 ['<2 years' 'Censored' 1.0]
+	 ['<4 years' '≥4 years' 1.0]
+	 ['<4 years' 'Censored' 1.0]
+	 ['≥4 years' 'Censored' 1.0]
+
+	 Dunn test w/ BH correction
+	Mean ranks: Time to progress to AD
+<2 years    12.333333
+<4 years    13.000000
+≥4 years    10.333333
+Censored     9.666667
+	 ['<2 years' '<4 years' 0.8790333697376431]
+	 ['<2 years' '≥4 years' 0.8790333697376431]
+	 ['<2 years' 'Censored' 0.8790333697376431]
+	 ['<4 years' '≥4 years' 0.8790333697376431]
+	 ['<4 years' 'Censored' 0.8790333697376431]
+	 ['≥4 years' 'Censored' 0.8790333697376431]
+------------
+NACC, Education (yrs):
+Kruskal-Wallis test: Education (yrs)
+	H=3.909226333675807
+	df=3
+	p=0.2714343478091753
+	n_x=378,46,21,63
+	n_x_nan=0,0,0,0
+
+	 Dunn test w/ bonferroni correction
+	Mean ranks: Time to progress to AD
+<2 years    265.912698
+<4 years    215.423913
+≥4 years    256.785714
+Censored    257.226190
+	 ['<2 years' '<4 years' 0.4269056243161491]
+	 ['<2 years' '≥4 years' 1.0]
+	 ['<2 years' 'Censored' 1.0]
+	 ['<4 years' '≥4 years' 1.0]
+	 ['<4 years' 'Censored' 0.38111258105120416]
+	 ['≥4 years' 'Censored' 1.0]
+
+	 Dunn test w/ BH correction
+	Mean ranks: Time to progress to AD
+<2 years    265.912698
+<4 years    215.423913
+≥4 years    256.785714
+Censored    257.226190
+	 ['<2 years' '<4 years' 0.21345281215807455]
+	 ['<2 years' '≥4 years' 0.9621109790580911]
+	 ['<2 years' 'Censored' 0.9621109790580911]
+	 ['<4 years' '≥4 years' 0.5526354116865011]
+	 ['<4 years' 'Censored' 0.21345281215807455]
+	 ['≥4 years' 'Censored' 0.9891345603471783]
+------------
+Pooled MWU for MMSE, ADNIxNACC
+-----------
+Wilcoxon Rank-Sum test: ADNI>NACC
+	stat=72597.5
+	p=1.2246197927356794e-12
+	n_x=544
+	n_y=200
+	n_x_nan=0
+	n_y_nan=308
+------------
+Pooled MWU for Age (yrs), ADNIxNACC
+-----------
+Wilcoxon Rank-Sum test: ADNI<NACC
+	stat=127436.0
+	p=0.02908708126639927
+	n_x=544
+	n_y=508
+	n_x_nan=0
+	n_y_nan=0
+------------
+Pooled MWU for Education (yrs), ADNIxNACC
+-----------
+Wilcoxon Rank-Sum test: ADNI>NACC
+	stat=153880.0
+	p=0.0012123141891427277
+	n_x=544
+	n_y=508
+	n_x_nan=0
+	n_y_nan=0
+Omnibus for Time to progress to AD	chi2=4.184234063647022
+	p=0.24224510208676345
+	dof=3
+	expected_lt5=False
+
+
+Time to progress to AD,col <2 years: 
+	chi2=0.1663138499035426
+	p=2.7336352081745208
+	dof=1
+	expected_lt5=False
+	proportion ADNI vs NACC: 0.11397058823529412 vs 0.12401574803149606
+	counts for ADNI vs NACC: 544 vs 508
+
+Time to progress to AD,col <4 years: 
+	chi2=0.22638468274262757
+	p=2.536870346391699
+	dof=1
+	expected_lt5=False
+	proportion ADNI vs NACC: 0.10110294117647059 vs 0.09055118110236221
+	counts for ADNI vs NACC: 544 vs 508
+
+Time to progress to AD,col Censored: 
+	chi2=0.8517864563010724
+	p=1.424189795013402
+	dof=1
+	expected_lt5=False
+	proportion ADNI vs NACC: 0.7169117647058824 vs 0.7440944881889764
+	counts for ADNI vs NACC: 544 vs 508
+
+Time to progress to AD,col ≥4 years: 
+	chi2=3.094657135406394
+	p=0.3141987906966072
+	dof=1
+	expected_lt5=False
+	proportion ADNI vs NACC: 0.06801470588235294 vs 0.04133858267716536
+	counts for ADNI vs NACC: 544 vs 508
+Omnibus for #APOE ε4 Alleles	chi2=4.370404585082139
+	p=0.11245498254900195
+	dof=2
+	expected_lt5=False
+
+
+#APOE ε4 Alleles,col 0: 
+	chi2=3.9009593993118648
+	p=0.1447756253523048
+	dof=1
+	expected_lt5=False
+	proportion ADNI vs NACC: 0.5257352941176471 vs 0.5936675461741425
+	counts for ADNI vs NACC: 544 vs 379
+
+#APOE ε4 Alleles,col 1: 
+	chi2=1.703169191604517
+	p=0.575622110933365
+	dof=1
+	expected_lt5=False
+	proportion ADNI vs NACC: 0.3602941176470588 vs 0.316622691292876
+	counts for ADNI vs NACC: 544 vs 379
+
+#APOE ε4 Alleles,col 2: 
+	chi2=1.1625033385343109
+	p=0.8428409233677846
+	dof=1
+	expected_lt5=False
+	proportion ADNI vs NACC: 0.11397058823529412 vs 0.08970976253298153
+	counts for ADNI vs NACC: 544 vs 379
+Omnibus for Sex	chi2=1.3335882929314264
+	p=0.248167858634892
+	dof=1
+	expected_lt5=False
+

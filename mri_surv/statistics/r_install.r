@@ -1,0 +1,6 @@
+install.packages("lmerTest")
+install.packages("broom")
+install.packages("emmeans")
+install.packages("ggplot2")
+install.packages("gridExtra")
+install.packages("sjPlot")

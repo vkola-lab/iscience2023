@@ -1,0 +1,20 @@
+{
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./mri_surv",
+        "-p",
+        "test*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.cwd": "mri_surv",
+    "python.formatting.provider": "black",
+    "python.languageServer": "Pylance",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.extraPaths": ["."]
+}
