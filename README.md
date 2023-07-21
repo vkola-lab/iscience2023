@@ -8,8 +8,9 @@ We present here code for the above paper. This code has principally been organiz
 
 ## Requirements
 Please ensure your environment has following softwares installed:
-python - 3.10
-python packages - see 'requirements.txt' in '~/mri_surv/cgan_m/cnn/requirements.txt'
+
+python - 3.10.
+python packages - see 'requirements.txt' in '~/mri_surv/cgan_m/cnn/requirements.txt'.
 
 We recommend use 'conda' to maintain the packages for python.
 
@@ -145,7 +146,8 @@ In addition, R files may be run using R studio or your R interpreter of choice. 
 
 ## FAQ
 Q: I got 'ValueError: Cannot load file containing pickled data when allow_pickle=False' when training the CNN model?
-A: 
+
+A: In most cases, you can fix by running this command:
 ```
 git lfs install
 git lfs pull
