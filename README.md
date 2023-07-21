@@ -6,6 +6,18 @@ This work is accepted in *iScience*.
 
 We present here code for the above paper. This code has principally been organized in the **main.py** file under mri_surv/
 
+## Requirements
+Please ensure your environment has following softwares installed:
+python - 3.10
+python packages - see 'requirements.txt' in '~/mri_surv/cgan_m/cnn/requirements.txt'
+
+We recommend use 'conda' to maintain the packages for python.
+
+## Installation
+```bash
+git clone https://github.com/vkola-lab/iscience2023.git
+```
+
 ## Metadata generation and image processing
 
 Before running this code, please note that the following environments were used to run our code:
@@ -129,3 +141,12 @@ The figures will be saved in ./mri-pet/mri_surv/figures/supplement_survival/
 Finally, to compute statistics based on these results in addition to the MLP results, you may run `python main.py --stats 1`. Of note, you must run the MLP model script before running this code, or you will generate an error.
 
 In addition, R files may be run using R studio or your R interpreter of choice. Please make sure to install the packages listed in our manuscript.
+
+
+## FAQ
+Q: I got 'ValueError: Cannot load file containing pickled data when allow_pickle=False' when training the CNN model?
+A: 
+```
+git lfs install
+git lfs pull
+```

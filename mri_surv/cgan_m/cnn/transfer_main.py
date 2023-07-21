@@ -208,5 +208,5 @@ def main(train=False):
     print('-'*100)
 
 if __name__ == "__main__":
-    # main(True)
-    main()
+    main(True)
+    # main()

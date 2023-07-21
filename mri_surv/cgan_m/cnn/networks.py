@@ -1099,6 +1099,8 @@ class CNN_Surv_Wrapper_Tra:
         self.optimizer = optim.SGD(self.model.parameters(), lr=lr, weight_decay=0.01)
         # self.optimizer = optim.Adam(self.model.parameters(), lr=lr, weight_decay=0.01)
         self.checkpoint_dir = './checkpoint_dir/{}_exp{}/'.format(self.model_name, exp_idx)
+        if not os.path.exists('./checkpoint_dir/'):
+            os.mkdir('./checkpoint_dir/')
         if not os.path.exists(self.checkpoint_dir):
             os.mkdir(self.checkpoint_dir)
 
