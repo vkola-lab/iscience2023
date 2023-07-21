@@ -56,75 +56,6 @@ def _read_csv_cox(filename, skip_ids: list=None):
     })
     return df
 
-class CNN_Data_Append(Dataset):
-    def __init__(self, Data_dir, exp_idx, stage, ratio=(0.6, 0.2, 0.2), seed=1000, name='', fold=[], external=False):
-        random.seed(seed)
-
-        self.stage = stage
-        self.cache = []
-        self.exp_idx = exp_idx
-        self.Data_dir = Data_dir
-
-        self.Data_list = glob.glob(Data_dir + '*nii*')
-        
-        # csvname = '~/mri-pet/mri_surv/metadata/data_processed/merged_dataframe_cox_noqc_pruned_final.csv'
-        # if external:
-        #     csvname = '~/mri-pet/mri_surv/metadata/data_processed/merged_dataframe_cox_test_pruned_final.csv'
-
-        csvname = '../../metadata/data_processed/merged_dataframe_cox_noqc_pruned_final.csv'
-        if external:
-            csvname = '../../metadata/data_processed/merged_dataframe_cox_test_pruned_final.csv'
-
-        metadata = _read_csv_cox(csvname)
-        # print(metadata)
-        # print(metadata['TIMES'])
-        # sys.exit()
-        metadata['MRI_fi'] = ''
-
-        self.name = 'mri'
-        self.Data_list.sort() #ensure the order is correct
-
-        tmp_f = []
-        tmp_d = []
-        metadata.set_index('RID', inplace=True)
-        for rid in metadata.index:
-            for d in self.Data_list:
-                fname = os.path.basename(d)    
-                if rid in fname:
-                    metadata.loc[rid, 'MRI_fi'] = d
-                    break
-        
-        empty_idx = metadata[metadata['MRI_fi'] == ''].index
-
-        idxs = list(range(len(metadata)))
-        self.index_list = _retrieve_kfold_partition(idxs, self.stage, 5, self.exp_idx)
-
-        self.fileIDs = np.array(metadata.index)[self.index_list] #Note: this only for csv generation not used for data retrival
-        self.metadata = metadata.copy()
-
-    def __len__(self):
-        return len(self.index_list)
-
-    def __getitem__(self, idx):
-        rid = self.fileIDs[idx]
-
-        obs = self.metadata.loc[rid, 'TIMES']
-        hit = self.metadata.loc[rid, 'HITS']
-        age = self.metadata.loc[rid, 'AGE']
-        mmse = self.metadata.loc[rid, 'MMSE']
-        sex = self.metadata.loc[rid, 'SEX'] == 'M'
-        educ = self.metadata.loc[rid, 'EDUC']
-        data = nib.load(self.metadata.loc[rid, 'MRI_fi']).get_fdata().astype(np.float32)
-        
-        data[data != data] = 0
-        SCALE = True
-
-        if SCALE:
-            data = rescale(data, (0, 2.5))
-        data = np.expand_dims(data, axis=0)
-        return data, obs, hit, age, mmse, sex, educ
-        # return data, obs, hit
-
 def _retrieve_kfold_partition(idxs, stage, folds=5, exp_idx=1, shuffle=True,
                               random_state=120):
     idxs = np.asarray(idxs).copy()
@@ -781,34 +712,6 @@ class CNN_Data(Dataset):
         return np.array(weights)[self.index_list], class_weights
 
 if __name__ == "__main__":
-
-    train_data = CNN_Data_Append("/data2/MRI_PET_DATA/processed_images_final_cox_noqc/brain_stripped_cox_noqc/", 0, stage='train', seed=1, name='a', fold=5)
-    valid_data = CNN_Data_Append("/data2/MRI_PET_DATA/processed_images_final_cox_noqc/brain_stripped_cox_noqc/", 0, stage='valid', seed=1, name='a', fold=5)
-    test_data = CNN_Data_Append("/data2/MRI_PET_DATA/processed_images_final_cox_noqc/brain_stripped_cox_noqc/", 0, stage='test', seed=1, name='a', fold=5)
-    print(len(train_data))
-    print(len(valid_data))
-    print(len(test_data))
-    for item in test_data:
-        data, obs, hit, age, mmse, sex, educ = item
-        print('obs, hit')
-        print(obs, hit)
-        sys.exit()
-    # dataset = CNN_Data_Pre(Data_dir="/data2/MRI_PET_DATA/processed_images_final_unused_cox/brain_stripped_unused_cox/", exp_idx=0, stage='all')
-    # print(len(dataset))
-    # dataset = FCN_Data(Data_dir='/data2/ADNIP/', exp_idx=0, stage='valid_patch')
-    # dataset = FCN_Data(Data_dir='/home/mfromano/data/adni/processed_images_test/', exp_idx=0, stage='train', whole_volume=True)
-    # train_dataloader = DataLoader(dataset, batch_size=1)
-    # sample_weight, _ = dataset.get_sample_weights()
-    # sampler = torch.utils.data.sampler.WeightedRandomSampler(sample_weight, len(sample_weight))
-    # train_w_dataloader = DataLoader(dataset, batch_size=1, sampler=sampler)
-    # for scan1, label in train_w_dataloader:
-    # t = []
-    # for scan1, label in dataset:
-    #     if scan1.shape in t:
-    #         pass
-    #     else:
-    #         t.append(scan1.shape)
-    # print(t)
 
     train_data = AE_Cox_Data("/data2/MRI_PET_DATA/processed_images_final_cox_noqc/brain_stripped_cox_noqc/", 0, stage='train', seed=1, name='a', fold=5)
     valid_data = AE_Cox_Data("/data2/MRI_PET_DATA/processed_images_final_cox_noqc/brain_stripped_cox_noqc/", 0, stage='valid', seed=1, name='a', fold=5)
