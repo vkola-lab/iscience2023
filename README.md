@@ -9,21 +9,21 @@ We present here code for the above paper. This code has principally been organiz
 ## Results
 [figure/table]
 
-## Installation
+## Installation & Requirements
 ```bash
 git clone https://github.com/vkola-lab/iscience2023.git
 ```
 
-## Requirements
 Please ensure your environment has following softwares installed:
 
+```
 python - 3.10.
-
 python packages - in '~/mri_surv/cgan_m/cnn/requirements.txt'.
+```
 
 We recommend use 'conda' to maintain the packages for python.
 
-To install the packages, you can use
+To install the packages, you can use following commands:
 ```bash
 cd iscience2023/mri_surv/cgan_m/cnn/requirements.txt
 pip install -r requirements.txt
@@ -142,13 +142,38 @@ def main():
     print('pre-training completed')
 ```
 
+The 'cnn_config.json' contains following parameters:
+```json
+    "cnn": {
+        "fil_num":              10,
+        "drop_rate":            0.01,
+        "batch_size":           10,
+        "balanced":             0,
+        "metric":               "CrossEntropy",
+        "Data_dir":             "/data2/MRI_PET_DATA/processed_images_final_cox_noqc/brain_stripped_cox_noqc/",
+        "learning_rate":        0.001,
+        "train_epochs":         500
+    },
+    "mlp_parcellation": {
+        "fil_num": 25,
+        "drop_rate": 0.5,
+        "learning_rate": 0.001,
+        "weight_decay": 0.1,
+        "train_epochs": 2000,
+        "criterion": "cox_loss_orig",
+        "dataset": "ParcellationData",
+        "dataset_external": "ParcellationDataNacc",
+        "model": "_MLP"
+    }
+```
+
+This file and following '_main' files can be configured similarly
+
 * Train a CNN for survival prediction
 ```
 CUBLAS_WORKSPACE_CONFIG=:4096:8 python transfer_main.py
 ```
 (You may edit this file by commenting out the loading part if you do not want transfer learning)
-
-This file and following '_main' files can be configured similarly as previous files
 
 * (Optional) Train a Resnet-based CNN for survival prediction
 ```
@@ -184,6 +209,8 @@ In addition, R files may be run using R studio or your R interpreter of choice. 
 
 ## Citation
 If you find our paper and repository useful, please consider citing our paper:
+
+```
 @inproceedings{
     author = {Michael F. Romano, Xiao Zhou, Akshara R. Balachandra, Michalina F. Jadick, Shangran Qiu, Diya A. Nijhawan, Prajakta S. Joshi, Shariq Mohammad, Peter H. Lee, Maximilian J. Smith, Aaron B. Paul, Asim Z. Mian, Juan E. Small, Sang P. Chin, Rhoda Au, Vijaya B. Kolachalama},
     title = {Deep learning for risk-based stratification of cognitively impaired individuals},
@@ -191,6 +218,7 @@ If you find our paper and repository useful, please consider citing our paper:
     year = {2023},
     url = {Paper URL}
 }
+```
 
 ## FAQ
 Q: I got 'ValueError: Cannot load file containing pickled data when allow_pickle=False' when training the CNN model?

@@ -34,9 +34,9 @@ def cnn_pre_main(repeat, model_name, setting, Wrapper):
 
 def main():
     config = read_json('./cnn_config.json')
+    cnn_pre_config = config['cnn_pre']
 
     PWrapper = CNN_Wrapper_Pre
-    cnn_pre_config = config['cnn_pre']
     print('pre-training networks for transfer learning...')
 
     cnn_repeat = 1

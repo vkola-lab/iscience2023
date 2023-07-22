@@ -111,9 +111,9 @@ def cnn_surv_main_dfs(repeat, model_name, setting, Wrapper):
 
 def main(train=True):
     config = read_json('./cnn_config.json')
+    cnn_config = config['cnn_surv_res']
 
     CWrapper = CNN_Surv_Wrapper_Res
-    cnn_config = config['cnn_surv_res']
     print('running CNN_surv_res classifiers')
 
     # cnn_main(repeat, 'cnn', config['cnn'])
@@ -124,7 +124,6 @@ def main(train=True):
 
     cnn_repeat = 5
     cnn_names = ['cnn_mri', 'cnn_amyloid', 'cnn_fdg']
-    scan_names = ['mri', 'amyloid', 'fdg']
     modes = []
 
     print('-'*100)
@@ -136,8 +135,7 @@ def main(train=True):
         # cnn_surv_main_dfs(cnn_repeat, c_name+'_surv_tra', cnn_config, Wrapper=CWrapper)
         print('-'*100)
         break
-    sys.exit()
-    print(modes)
+    # print(modes)
     # cross_set(mode=modes, fcn_repeat=mlp_repeat, mlp_repeat=fcn_repeat)
 
 if __name__ == "__main__":

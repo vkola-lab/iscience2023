@@ -190,9 +190,9 @@ def cnn_dfs_raw_train(num_exps, model_name, setting, Wrapper):
 
 def main(train=False):
     config = read_json('./cnn_config.json')
+    cnn_config = config['cnn_surv']
 
     CWrapper = CNN_Surv_Wrapper_Tra
-    cnn_config = config['cnn_surv']
     print('running CNN_surv_tra classifiers')
 
     cnn_repeat = 5
