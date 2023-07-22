@@ -6,17 +6,27 @@ This work is accepted in *iScience*.
 
 We present here code for the above paper. This code has principally been organized in the **main.py** file under mri_surv/
 
-## Requirements
-Please ensure your environment has following softwares installed:
-
-python - 3.10.
-python packages - see 'requirements.txt' in '~/mri_surv/cgan_m/cnn/requirements.txt'.
-
-We recommend use 'conda' to maintain the packages for python.
+## Results
+[figure/table]
 
 ## Installation
 ```bash
 git clone https://github.com/vkola-lab/iscience2023.git
+```
+
+## Requirements
+Please ensure your environment has following softwares installed:
+
+python - 3.10.
+
+python packages - in '~/mri_surv/cgan_m/cnn/requirements.txt'.
+
+We recommend use 'conda' to maintain the packages for python.
+
+To install the packages, you can use
+```bash
+cd iscience2023/mri_surv/cgan_m/cnn/requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Metadata generation and image processing
@@ -106,14 +116,43 @@ For CNN, please CD into the ./mri-pet/mri_surv/cgan_m/cnn/ path, then you can
 CUBLAS_WORKSPACE_CONFIG=:4096:8 python pretrain_main.py
 ```
 (The 'CUBLAS_WORKSPACE_CONFIG=:4096:8' is for reproducible results, which is optional)
+
+You may change the training setting by change altering the code in this file correspondingly:
+```python
+def main():
+    # configuration file for network hyperparameters
+    config = read_json('./cnn_config.json')
+    cnn_pre_config = config['cnn_pre']
+
+    PWrapper = CNN_Wrapper_Pre
+    print('pre-training networks for transfer learning...')
+
+    # number of models to train (different initialization)
+    cnn_repeat = 1
+
+    # scan types, here we only use mri, but placeholders are available for potential extensions
+    cnn_names = ['cnn_mri', 'cnn_amyloid', 'cnn_fdg']
+
+    print('-'*100)
+    for c_name in cnn_names:
+        # modes += [c_name]
+        cnn_pre_main(cnn_repeat, c_name+'_pre_2', cnn_pre_config, Wrapper=PWrapper)
+        print('-'*100)
+        break
+    print('pre-training completed')
+```
+
 * Train a CNN for survival prediction
 ```
 CUBLAS_WORKSPACE_CONFIG=:4096:8 python transfer_main.py
 ```
 (You may edit this file by commenting out the loading part if you do not want transfer learning)
+
+This file and following '_main' files can be configured similarly as previous files
+
 * (Optional) Train a Resnet-based CNN for survival prediction
 ```
-CUBLAS_WORKSPACE_CONFIG=:4096:8 python Res_main.py
+CUBLAS_WORKSPACE_CONFIG=:4096:8 python res_main.py
 ```
 
 For ViT, please CD into the ./mri-pet/mri_surv/vit/ path, then you can
@@ -143,6 +182,15 @@ Finally, to compute statistics based on these results in addition to the MLP res
 
 In addition, R files may be run using R studio or your R interpreter of choice. Please make sure to install the packages listed in our manuscript.
 
+## Citation
+If you find our paper and repository useful, please consider citing our paper:
+@inproceedings{
+    author = {Michael F. Romano, Xiao Zhou, Akshara R. Balachandra, Michalina F. Jadick, Shangran Qiu, Diya A. Nijhawan, Prajakta S. Joshi, Shariq Mohammad, Peter H. Lee, Maximilian J. Smith, Aaron B. Paul, Asim Z. Mian, Juan E. Small, Sang P. Chin, Rhoda Au, Vijaya B. Kolachalama},
+    title = {Deep learning for risk-based stratification of cognitively impaired individuals},
+    booktitle = {iScience},
+    year = {2023},
+    url = {Paper URL}
+}
 
 ## FAQ
 Q: I got 'ValueError: Cannot load file containing pickled data when allow_pickle=False' when training the CNN model?
