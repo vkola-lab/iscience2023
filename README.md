@@ -6,7 +6,7 @@ This work is accepted in *iScience*.
 
 We present here code for the above paper. This code has principally been organized in the **main.py** file under mri_surv/
 
-<!-- <img src="FigureTable/Repo/Figure1.png" width="2000"/> -->
+<img src="figures/structure.png" width="2000"/>
 
 ## Results
 
@@ -164,7 +164,7 @@ def main():
     print('pre-training completed')
 ```
 
-The 'cnn_config.json' contains following parameters:
+The 'cnn_config.json' contains following parameters (only showing part of the file):
 ```json
 {
   "cnn": {
