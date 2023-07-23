@@ -337,7 +337,7 @@ def _wilcox(df_group) -> tuple:
     high, low = df_group.groupby("SubtypeLabels").apply(
         lambda x: x["Mean Grade"].to_numpy()
     )
-    res = mannwhitneyu(high, low)
+    res = mannwhitneyu(high, low, alternative="two-sided")
     return res.statistic, res.pvalue, len(high), len(low)
 
 
