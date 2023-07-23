@@ -4,7 +4,7 @@ This work is accepted in *iScience*.
 
 ## Introduction
 
-We present here code for the above paper. This code has principally been organized in the **main.py** file under mri_surv/
+We present here code and a breif review for the above paper. This code has principally been organized in the **main.py** file under mri_surv/
 
 <img src="figures/structure.png" width="2000"/>
 
