@@ -6,10 +6,32 @@ This work is accepted in *iScience*.
 
 We present here code for the above paper. This code has principally been organized in the **main.py** file under mri_surv/
 
+<!-- <img src="FigureTable/Repo/Figure1.png" width="2000"/> -->
+
 ## Results
-[figure/table]
+
+The table below shows the mean Concordance Index and Integrated Brier Score for different models and datasets. These metrics were averaged over 5-fold cross validation with standard deviation shown in parentheses. Concordance indices were averaged over the 3 time bins (24 months, 48 months, 108 months) for each fold. The MLPs were either trained with gray matter volumes from Neuromorphometrics cortical parcellations, averaged over hemispheres [GMV], or with gray matter volumes and CSF volumes from Neuromorphometrics cortical parcellations [GMV + CSF].
+
+| Model/Dataset | ADNI Concordance Index | ADNI Integrated Brier Score | NACC Concordance Index | NACC Integrated Brier Score |
+| --- | --- | --- | --- | --- |
+| S-CNN | 0·756 (0·051) | 0·209 (0·050) | 0·676 (0·003) | 0·122 (0·013) |
+| MLP, GMV | 0·731 (0·032) | 0·192 (0·057) | 0·707 (0·009)** | 0·108 (0·010) |
+| Weibull | 0·743 (0·020) | 0·204 (0·049) | 0·696 (0·010)** | 0·105 (0·005) |
+| CPH | 0·751 (0·049) | 0·182 (0·055) | 0·735 (0·014)* | 0·104 (0·006) |
+| MLP, GMV + CSF | 0·729 (0·022) | 0·181 (0·044) | 0·699 (0·012)** | 0·114 (0·008) |
+
+\* Pairwise paired t-test comparisons revealed significant differences, after Benjamini-Hochberg correction, in model performance between CPH and the other models as well as between CNN and the other models.  
+\*\* MLP [GMV], MLP [GMV + CSF], and Weibull models had larger Concordance Indices in the NACC dataset compared with the S-CNN after pairwise paired t-test comparisons, p-values with Benjamini-Hochberg correction.
+
+Abbreviations:  
+S-CNN – survival convolutional neural network  
+MLP – multilayer perceptron  
+CPH – Cox proportional hazard model
+
+
 
 ## Installation & Requirements
+To download the repo, use:
 ```bash
 git clone https://github.com/vkola-lab/iscience2023.git
 ```
@@ -18,10 +40,10 @@ Please ensure your environment has following softwares installed:
 
 ```
 python - 3.10.
-python packages - in '~/mri_surv/cgan_m/cnn/requirements.txt'.
+python packages in '~/mri_surv/cgan_m/cnn/requirements.txt'.
 ```
 
-We recommend use 'conda' to maintain the packages for python.
+We recommend using 'conda' to maintain the packages for python.
 
 To install the packages, you can use following commands:
 ```bash
@@ -144,27 +166,29 @@ def main():
 
 The 'cnn_config.json' contains following parameters:
 ```json
-    "cnn": {
-        "fil_num":              10,
-        "drop_rate":            0.01,
-        "batch_size":           10,
-        "balanced":             0,
-        "metric":               "CrossEntropy",
-        "Data_dir":             "/data2/MRI_PET_DATA/processed_images_final_cox_noqc/brain_stripped_cox_noqc/",
-        "learning_rate":        0.001,
-        "train_epochs":         500
-    },
-    "mlp_parcellation": {
-        "fil_num": 25,
-        "drop_rate": 0.5,
-        "learning_rate": 0.001,
-        "weight_decay": 0.1,
-        "train_epochs": 2000,
-        "criterion": "cox_loss_orig",
-        "dataset": "ParcellationData",
-        "dataset_external": "ParcellationDataNacc",
-        "model": "_MLP"
-    }
+{
+  "cnn": {
+      "fil_num":              10,
+      "drop_rate":            0.01,
+      "batch_size":           10,
+      "balanced":             0,
+      "metric":               "CrossEntropy",
+      "Data_dir":             "/data2/MRI_PET_DATA/processed_images_final_cox_noqc/brain_stripped_cox_noqc/",
+      "learning_rate":        0.001,
+      "train_epochs":         500
+  },
+  "mlp_parcellation": {
+      "fil_num": 25,
+      "drop_rate": 0.5,
+      "learning_rate": 0.001,
+      "weight_decay": 0.1,
+      "train_epochs": 2000,
+      "criterion": "cox_loss_orig",
+      "dataset": "ParcellationData",
+      "dataset_external": "ParcellationDataNacc",
+      "model": "_MLP"
+  }
+}
 ```
 
 This file and following '_main' files can be configured similarly
