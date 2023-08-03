@@ -231,19 +231,6 @@ Finally, to compute statistics based on these results in addition to the MLP res
 
 In addition, R files may be run using R studio or your R interpreter of choice. Please make sure to install the packages listed in our manuscript.
 
-## Citation
-If you find our paper and repository useful, please consider citing our paper:
-
-```
-@inproceedings{
-    author = {Michael F. Romano, Xiao Zhou, Akshara R. Balachandra, Michalina F. Jadick, Shangran Qiu, Diya A. Nijhawan, Prajakta S. Joshi, Shariq Mohammad, Peter H. Lee, Maximilian J. Smith, Aaron B. Paul, Asim Z. Mian, Juan E. Small, Sang P. Chin, Rhoda Au, Vijaya B. Kolachalama},
-    title = {Deep learning for risk-based stratification of cognitively impaired individuals},
-    booktitle = {iScience},
-    year = {2023},
-    url = {Paper URL}
-}
-```
-
 ## FAQ
 Q: I got 'ValueError: Cannot load file containing pickled data when allow_pickle=False' when training the CNN model?
 
