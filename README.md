@@ -1,6 +1,6 @@
 # Deep learning for risk-based stratification of cognitively impaired individuals
 
-This work is accepted in *iScience*.
+This work is published in *iScience* (https://doi.org/10.1016/j.isci.2023.107522).
 
 ## Introduction
 
